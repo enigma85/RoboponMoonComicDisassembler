@@ -1,6 +1,6 @@
 # Robopon Open Disassembly
 
-A clean-room, ROM-data-free disassembly workspace for **Robot Poncots / Robopon** Game Boy Color games.
+A clean-room, ROM-data-free disassembly workspace for **Robot Poncots / Robopon** Game Boy Color games. This is AI-Driven so it sucks but it is intended to help get English translation completed of the 2 non-English games. And as a bonus could help get it into other languages as well. Again its AI so it sucks.
 
 Supported targets:
 
