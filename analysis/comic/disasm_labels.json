@@ -1,0 +1,2102 @@
+[
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0000",
+    "address": "0x0000",
+    "label": "comic_Bank00_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0040",
+    "address": "0x0040",
+    "label": "comic_TileCandidate_00_0040",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x006E",
+    "address": "0x006E",
+    "label": "comic_TextCandidate_00_006E",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0080",
+    "address": "0x0080",
+    "label": "comic_TextCandidate_00_0080",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0089",
+    "address": "0x0089",
+    "label": "comic_TextCandidate_00_0089",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x009A",
+    "address": "0x009A",
+    "label": "comic_TextCandidate_00_009A",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x00B5",
+    "address": "0x00B5",
+    "label": "comic_TextCandidate_00_00B5",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x00C5",
+    "address": "0x00C5",
+    "label": "comic_TextCandidate_00_00C5",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x00CE",
+    "address": "0x00CE",
+    "label": "comic_TextCandidate_00_00CE",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x00DB",
+    "address": "0x00DB",
+    "label": "comic_TextCandidate_00_00DB",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0100",
+    "address": "0x0100",
+    "label": "EntryPoint",
+    "comment": "cartridge entry point"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0101",
+    "address": "0x0101",
+    "label": "comic_TextCandidate_00_0101",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0104",
+    "address": "0x0104",
+    "label": "NintendoLogo",
+    "comment": "Nintendo logo data"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x011B",
+    "address": "0x011B",
+    "label": "comic_TextCandidate_00_011B",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0134",
+    "address": "0x0134",
+    "label": "ROMHeader_Title",
+    "comment": "ROM header title"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x013F",
+    "address": "0x013F",
+    "label": "comic_TextCandidate_00_013F",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0143",
+    "address": "0x0143",
+    "label": "ROMHeader_CGBFlag",
+    "comment": "ROM header CGB flag"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0147",
+    "address": "0x0147",
+    "label": "ROMHeader_CartType",
+    "comment": "ROM header cart type"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x014D",
+    "address": "0x014D",
+    "label": "ROMHeader_HeaderChecksum",
+    "comment": "ROM header checksum"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x014E",
+    "address": "0x014E",
+    "label": "ROMHeader_GlobalChecksum",
+    "comment": "ROM header global checksum"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0150",
+    "address": "0x0150",
+    "label": "StartAfterHeader",
+    "comment": "first byte after ROM header"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x015A",
+    "address": "0x015A",
+    "label": "comic_TextCandidate_00_015A",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0173",
+    "address": "0x0173",
+    "label": "comic_TextCandidate_00_0173",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0182",
+    "address": "0x0182",
+    "label": "comic_TextCandidate_00_0182",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x018F",
+    "address": "0x018F",
+    "label": "comic_TextCandidate_00_018F",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x01AF",
+    "address": "0x01AF",
+    "label": "comic_TextCandidate_00_01AF",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x01BA",
+    "address": "0x01BA",
+    "label": "comic_FreeSpace_00_01BA",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x01E7",
+    "address": "0x01E7",
+    "label": "comic_TextCandidate_00_01E7",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x01F3",
+    "address": "0x01F3",
+    "label": "comic_TextCandidate_00_01F3",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x022E",
+    "address": "0x022E",
+    "label": "comic_TextCandidate_00_022E",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0239",
+    "address": "0x0239",
+    "label": "comic_TextCandidate_00_0239",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x027A",
+    "address": "0x027A",
+    "label": "comic_TextCandidate_00_027A",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0294",
+    "address": "0x0294",
+    "label": "comic_TextCandidate_00_0294",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x029E",
+    "address": "0x029E",
+    "label": "comic_FreeSpace_00_029E",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x02F0",
+    "address": "0x02F0",
+    "label": "comic_TileCandidate_00_02F0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x02FD",
+    "address": "0x02FD",
+    "label": "comic_TextCandidate_00_02FD",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0334",
+    "address": "0x0334",
+    "label": "comic_TextCandidate_00_0334",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x034B",
+    "address": "0x034B",
+    "label": "comic_TextCandidate_00_034B",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0359",
+    "address": "0x0359",
+    "label": "comic_TextCandidate_00_0359",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x036D",
+    "address": "0x036D",
+    "label": "comic_TextCandidate_00_036D",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x038B",
+    "address": "0x038B",
+    "label": "comic_TextCandidate_00_038B",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x03AC",
+    "address": "0x03AC",
+    "label": "comic_TextCandidate_00_03AC",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x03BF",
+    "address": "0x03BF",
+    "label": "comic_TextCandidate_00_03BF",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x03C9",
+    "address": "0x03C9",
+    "label": "comic_TextCandidate_00_03C9",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x03FC",
+    "address": "0x03FC",
+    "label": "comic_TextCandidate_00_03FC",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0406",
+    "address": "0x0406",
+    "label": "comic_TextCandidate_00_0406",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0413",
+    "address": "0x0413",
+    "label": "comic_TextCandidate_00_0413",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0420",
+    "address": "0x0420",
+    "label": "comic_TextCandidate_00_0420",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0443",
+    "address": "0x0443",
+    "label": "comic_TextCandidate_00_0443",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0453",
+    "address": "0x0453",
+    "label": "comic_TextCandidate_00_0453",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0471",
+    "address": "0x0471",
+    "label": "comic_TextCandidate_00_0471",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x048F",
+    "address": "0x048F",
+    "label": "comic_FreeSpace_00_048F",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0500",
+    "address": "0x0500",
+    "label": "comic_TileCandidate_00_0500",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x050D",
+    "address": "0x050D",
+    "label": "comic_TextCandidate_00_050D",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0516",
+    "address": "0x0516",
+    "label": "comic_TextCandidate_00_0516",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x052B",
+    "address": "0x052B",
+    "label": "comic_TextCandidate_00_052B",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0545",
+    "address": "0x0545",
+    "label": "comic_TextCandidate_00_0545",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0558",
+    "address": "0x0558",
+    "label": "comic_TextCandidate_00_0558",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x057D",
+    "address": "0x057D",
+    "label": "comic_TextCandidate_00_057D",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0588",
+    "address": "0x0588",
+    "label": "comic_TextCandidate_00_0588",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0593",
+    "address": "0x0593",
+    "label": "comic_TextCandidate_00_0593",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x05AF",
+    "address": "0x05AF",
+    "label": "comic_TextCandidate_00_05AF",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x05C6",
+    "address": "0x05C6",
+    "label": "comic_TextCandidate_00_05C6",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x05DE",
+    "address": "0x05DE",
+    "label": "comic_TextCandidate_00_05DE",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x05F5",
+    "address": "0x05F5",
+    "label": "comic_TextCandidate_00_05F5",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x060C",
+    "address": "0x060C",
+    "label": "comic_TextCandidate_00_060C",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0625",
+    "address": "0x0625",
+    "label": "comic_TextCandidate_00_0625",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0636",
+    "address": "0x0636",
+    "label": "comic_TextCandidate_00_0636",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0671",
+    "address": "0x0671",
+    "label": "comic_TextCandidate_00_0671",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0686",
+    "address": "0x0686",
+    "label": "comic_TextCandidate_00_0686",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x068F",
+    "address": "0x068F",
+    "label": "comic_TextCandidate_00_068F",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x069D",
+    "address": "0x069D",
+    "label": "comic_TextCandidate_00_069D",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x06D3",
+    "address": "0x06D3",
+    "label": "comic_TextCandidate_00_06D3",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x06DF",
+    "address": "0x06DF",
+    "label": "comic_TextCandidate_00_06DF",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x06EE",
+    "address": "0x06EE",
+    "label": "comic_TextCandidate_00_06EE",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x06FA",
+    "address": "0x06FA",
+    "label": "comic_TextCandidate_00_06FA",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x070D",
+    "address": "0x070D",
+    "label": "comic_TextCandidate_00_070D",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0721",
+    "address": "0x0721",
+    "label": "comic_TextCandidate_00_0721",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0730",
+    "address": "0x0730",
+    "label": "comic_TextCandidate_00_0730",
+    "comment": "suspected text/data run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0D3A",
+    "address": "0x0D3A",
+    "label": "comic_FreeSpace_00_0D3A",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x0E00",
+    "address": "0x0E00",
+    "label": "comic_TileCandidate_00_0E00",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x38B2",
+    "address": "0x38B2",
+    "label": "comic_FreeSpace_00_38B2",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x38D0",
+    "address": "0x38D0",
+    "label": "comic_TileCandidate_00_38D0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x3D9C",
+    "address": "0x3D9C",
+    "label": "comic_FreeSpace_00_3D9C",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x00",
+    "bank_offset": "0x3F96",
+    "address": "0x3F96",
+    "label": "comic_FreeSpace_00_3F96",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x01",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank01_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x01",
+    "bank_offset": "0x0B00",
+    "address": "0x4B00",
+    "label": "comic_FreeSpace_01_0B00",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x01",
+    "bank_offset": "0x0B20",
+    "address": "0x4B20",
+    "label": "comic_TileCandidate_01_0B20",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x01",
+    "bank_offset": "0x0E52",
+    "address": "0x4E52",
+    "label": "comic_FreeSpace_01_0E52",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x01",
+    "bank_offset": "0x13B2",
+    "address": "0x53B2",
+    "label": "comic_FreeSpace_01_13B2",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x01",
+    "bank_offset": "0x2120",
+    "address": "0x6120",
+    "label": "comic_TileCandidate_01_2120",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x01",
+    "bank_offset": "0x2818",
+    "address": "0x6818",
+    "label": "comic_FreeSpace_01_2818",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x01",
+    "bank_offset": "0x2850",
+    "address": "0x6850",
+    "label": "comic_TileCandidate_01_2850",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x01",
+    "bank_offset": "0x3FB7",
+    "address": "0x7FB7",
+    "label": "comic_FreeSpace_01_3FB7",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x02",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank02_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x03",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank03_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x03",
+    "bank_offset": "0x3DF3",
+    "address": "0x7DF3",
+    "label": "comic_FreeSpace_03_3DF3",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x04",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank04_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x04",
+    "bank_offset": "0x3729",
+    "address": "0x7729",
+    "label": "comic_FreeSpace_04_3729",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x05",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank05_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x05",
+    "bank_offset": "0x3FE4",
+    "address": "0x7FE4",
+    "label": "comic_FreeSpace_05_3FE4",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank06_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x0110",
+    "address": "0x4110",
+    "label": "comic_TileCandidate_06_0110",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x03C0",
+    "address": "0x43C0",
+    "label": "comic_FreeSpace_06_03C0",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x0410",
+    "address": "0x4410",
+    "label": "comic_TileCandidate_06_0410",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x0510",
+    "address": "0x4510",
+    "label": "comic_FreeSpace_06_0510",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x0530",
+    "address": "0x4530",
+    "label": "comic_TileCandidate_06_0530",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x0BC0",
+    "address": "0x4BC0",
+    "label": "comic_TileCandidate_06_0BC0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x0DAF",
+    "address": "0x4DAF",
+    "label": "comic_FreeSpace_06_0DAF",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x0E00",
+    "address": "0x4E00",
+    "label": "comic_TileCandidate_06_0E00",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x1800",
+    "address": "0x5800",
+    "label": "comic_FreeSpace_06_1800",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x18FF",
+    "address": "0x58FF",
+    "label": "comic_FreeSpace_06_18FF",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x1A00",
+    "address": "0x5A00",
+    "label": "comic_FreeSpace_06_1A00",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x1B00",
+    "address": "0x5B00",
+    "label": "comic_FreeSpace_06_1B00",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x1C00",
+    "address": "0x5C00",
+    "label": "comic_FreeSpace_06_1C00",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x1D00",
+    "address": "0x5D00",
+    "label": "comic_FreeSpace_06_1D00",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x1D20",
+    "address": "0x5D20",
+    "label": "comic_TileCandidate_06_1D20",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x2520",
+    "address": "0x6520",
+    "label": "comic_TileCandidate_06_2520",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x34C0",
+    "address": "0x74C0",
+    "label": "comic_TileCandidate_06_34C0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x3600",
+    "address": "0x7600",
+    "label": "comic_FreeSpace_06_3600",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x3700",
+    "address": "0x7700",
+    "label": "comic_FreeSpace_06_3700",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x3720",
+    "address": "0x7720",
+    "label": "comic_TileCandidate_06_3720",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x38B0",
+    "address": "0x78B0",
+    "label": "comic_TileCandidate_06_38B0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x3C60",
+    "address": "0x7C60",
+    "label": "comic_FreeSpace_06_3C60",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x3D60",
+    "address": "0x7D60",
+    "label": "comic_FreeSpace_06_3D60",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x3D80",
+    "address": "0x7D80",
+    "label": "comic_TileCandidate_06_3D80",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x06",
+    "bank_offset": "0x3FCF",
+    "address": "0x7FCF",
+    "label": "comic_FreeSpace_06_3FCF",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x07",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank07_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x07",
+    "bank_offset": "0x3BCB",
+    "address": "0x7BCB",
+    "label": "comic_FreeSpace_07_3BCB",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x08",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank08_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x08",
+    "bank_offset": "0x3C36",
+    "address": "0x7C36",
+    "label": "comic_FreeSpace_08_3C36",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x09",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank09_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x09",
+    "bank_offset": "0x3784",
+    "address": "0x7784",
+    "label": "comic_FreeSpace_09_3784",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x0A",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank0A_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x0A",
+    "bank_offset": "0x3F6D",
+    "address": "0x7F6D",
+    "label": "comic_FreeSpace_0A_3F6D",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x0B",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank0B_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x0B",
+    "bank_offset": "0x3C26",
+    "address": "0x7C26",
+    "label": "comic_FreeSpace_0B_3C26",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x0C",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank0C_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x0C",
+    "bank_offset": "0x3F6A",
+    "address": "0x7F6A",
+    "label": "comic_FreeSpace_0C_3F6A",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x0D",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank0D_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x0D",
+    "bank_offset": "0x3ECC",
+    "address": "0x7ECC",
+    "label": "comic_FreeSpace_0D_3ECC",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank0E_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x016A",
+    "address": "0x416A",
+    "label": "comic_PtrTable_0E_016A",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x017E",
+    "address": "0x417E",
+    "label": "comic_PtrTable_0E_017E",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x0180",
+    "address": "0x4180",
+    "label": "comic_PtrTable_0E_0180",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x0182",
+    "address": "0x4182",
+    "label": "comic_PtrTable_0E_0182",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x0184",
+    "address": "0x4184",
+    "label": "comic_PtrTable_0E_0184",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x0186",
+    "address": "0x4186",
+    "label": "comic_PtrTable_0E_0186",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x0188",
+    "address": "0x4188",
+    "label": "comic_PtrTable_0E_0188",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x018A",
+    "address": "0x418A",
+    "label": "comic_PtrTable_0E_018A",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x018C",
+    "address": "0x418C",
+    "label": "comic_PtrTable_0E_018C",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x018E",
+    "address": "0x418E",
+    "label": "comic_PtrTable_0E_018E",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x0190",
+    "address": "0x4190",
+    "label": "comic_PtrTable_0E_0190",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0E",
+    "bank_offset": "0x0192",
+    "address": "0x4192",
+    "label": "comic_PtrTable_0E_0192",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x0F",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank0F_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x10",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank10_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x11",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank11_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x11",
+    "bank_offset": "0x3F0A",
+    "address": "0x7F0A",
+    "label": "comic_FreeSpace_11_3F0A",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x12",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank12_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x12",
+    "bank_offset": "0x3C2F",
+    "address": "0x7C2F",
+    "label": "comic_FreeSpace_12_3C2F",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x13",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank13_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x13",
+    "bank_offset": "0x3F7B",
+    "address": "0x7F7B",
+    "label": "comic_FreeSpace_13_3F7B",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x14",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank14_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x14",
+    "bank_offset": "0x3BAA",
+    "address": "0x7BAA",
+    "label": "comic_FreeSpace_14_3BAA",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x15",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank15_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x15",
+    "bank_offset": "0x3F3A",
+    "address": "0x7F3A",
+    "label": "comic_FreeSpace_15_3F3A",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank16_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x01C0",
+    "address": "0x41C0",
+    "label": "comic_FreeSpace_16_01C0",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x0290",
+    "address": "0x4290",
+    "label": "comic_TileCandidate_16_0290",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x0470",
+    "address": "0x4470",
+    "label": "comic_FreeSpace_16_0470",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x04F0",
+    "address": "0x44F0",
+    "label": "comic_FreeSpace_16_04F0",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x0570",
+    "address": "0x4570",
+    "label": "comic_FreeSpace_16_0570",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x05F0",
+    "address": "0x45F0",
+    "label": "comic_FreeSpace_16_05F0",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x0670",
+    "address": "0x4670",
+    "label": "comic_FreeSpace_16_0670",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x086F",
+    "address": "0x486F",
+    "label": "comic_FreeSpace_16_086F",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x08F0",
+    "address": "0x48F0",
+    "label": "comic_FreeSpace_16_08F0",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x0970",
+    "address": "0x4970",
+    "label": "comic_FreeSpace_16_0970",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x09F0",
+    "address": "0x49F0",
+    "label": "comic_FreeSpace_16_09F0",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x0A6F",
+    "address": "0x4A6F",
+    "label": "comic_FreeSpace_16_0A6F",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x0C00",
+    "address": "0x4C00",
+    "label": "comic_TileCandidate_16_0C00",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x16",
+    "bank_offset": "0x3E5F",
+    "address": "0x7E5F",
+    "label": "comic_FreeSpace_16_3E5F",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x17",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank17_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x17",
+    "bank_offset": "0x35E3",
+    "address": "0x75E3",
+    "label": "comic_FreeSpace_17_35E3",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x17",
+    "bank_offset": "0x3600",
+    "address": "0x7600",
+    "label": "comic_TileCandidate_17_3600",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x17",
+    "bank_offset": "0x385D",
+    "address": "0x785D",
+    "label": "comic_FreeSpace_17_385D",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x17",
+    "bank_offset": "0x391B",
+    "address": "0x791B",
+    "label": "comic_FreeSpace_17_391B",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x17",
+    "bank_offset": "0x395B",
+    "address": "0x795B",
+    "label": "comic_FreeSpace_17_395B",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x17",
+    "bank_offset": "0x399D",
+    "address": "0x799D",
+    "label": "comic_FreeSpace_17_399D",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x17",
+    "bank_offset": "0x3A17",
+    "address": "0x7A17",
+    "label": "comic_FreeSpace_17_3A17",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x17",
+    "bank_offset": "0x3A59",
+    "address": "0x7A59",
+    "label": "comic_FreeSpace_17_3A59",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x17",
+    "bank_offset": "0x3A97",
+    "address": "0x7A97",
+    "label": "comic_FreeSpace_17_3A97",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x18",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank18_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x18",
+    "bank_offset": "0x2AC0",
+    "address": "0x6AC0",
+    "label": "comic_TileCandidate_18_2AC0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x18",
+    "bank_offset": "0x3F04",
+    "address": "0x7F04",
+    "label": "comic_FreeSpace_18_3F04",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x19",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank19_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x19",
+    "bank_offset": "0x305C",
+    "address": "0x705C",
+    "label": "comic_FreeSpace_19_305C",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x19",
+    "bank_offset": "0x3180",
+    "address": "0x7180",
+    "label": "comic_TileCandidate_19_3180",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x19",
+    "bank_offset": "0x3A04",
+    "address": "0x7A04",
+    "label": "comic_FreeSpace_19_3A04",
+    "comment": "free-space run"
+  },
+  {
+    "bank": "0x1A",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank1A_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x1B",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank1B_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x1C",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank1C_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x1C",
+    "bank_offset": "0x0EF0",
+    "address": "0x4EF0",
+    "label": "comic_TileCandidate_1C_0EF0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x1C",
+    "bank_offset": "0x12D0",
+    "address": "0x52D0",
+    "label": "comic_TileCandidate_1C_12D0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x1D",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank1D_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x1D",
+    "bank_offset": "0x0EF0",
+    "address": "0x4EF0",
+    "label": "comic_TileCandidate_1D_0EF0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x1D",
+    "bank_offset": "0x1320",
+    "address": "0x5320",
+    "label": "comic_TileCandidate_1D_1320",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x1E",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank1E_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x1E",
+    "bank_offset": "0x1BA0",
+    "address": "0x5BA0",
+    "label": "comic_TileCandidate_1E_1BA0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x1E",
+    "bank_offset": "0x1D30",
+    "address": "0x5D30",
+    "label": "comic_TileCandidate_1E_1D30",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank1F_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0002",
+    "address": "0x4002",
+    "label": "comic_PtrTable_1F_0002",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0004",
+    "address": "0x4004",
+    "label": "comic_PtrTable_1F_0004",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0006",
+    "address": "0x4006",
+    "label": "comic_PtrTable_1F_0006",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0008",
+    "address": "0x4008",
+    "label": "comic_PtrTable_1F_0008",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x000A",
+    "address": "0x400A",
+    "label": "comic_PtrTable_1F_000A",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x000C",
+    "address": "0x400C",
+    "label": "comic_PtrTable_1F_000C",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x000E",
+    "address": "0x400E",
+    "label": "comic_PtrTable_1F_000E",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0010",
+    "address": "0x4010",
+    "label": "comic_PtrTable_1F_0010",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0012",
+    "address": "0x4012",
+    "label": "comic_PtrTable_1F_0012",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0014",
+    "address": "0x4014",
+    "label": "comic_PtrTable_1F_0014",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0016",
+    "address": "0x4016",
+    "label": "comic_PtrTable_1F_0016",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0018",
+    "address": "0x4018",
+    "label": "comic_PtrTable_1F_0018",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x001A",
+    "address": "0x401A",
+    "label": "comic_PtrTable_1F_001A",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x001C",
+    "address": "0x401C",
+    "label": "comic_PtrTable_1F_001C",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x001E",
+    "address": "0x401E",
+    "label": "comic_PtrTable_1F_001E",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0020",
+    "address": "0x4020",
+    "label": "comic_PtrTable_1F_0020",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0022",
+    "address": "0x4022",
+    "label": "comic_PtrTable_1F_0022",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0024",
+    "address": "0x4024",
+    "label": "comic_PtrTable_1F_0024",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0026",
+    "address": "0x4026",
+    "label": "comic_PtrTable_1F_0026",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0028",
+    "address": "0x4028",
+    "label": "comic_PtrTable_1F_0028",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x002A",
+    "address": "0x402A",
+    "label": "comic_PtrTable_1F_002A",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x002C",
+    "address": "0x402C",
+    "label": "comic_PtrTable_1F_002C",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x002E",
+    "address": "0x402E",
+    "label": "comic_PtrTable_1F_002E",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0030",
+    "address": "0x4030",
+    "label": "comic_PtrTable_1F_0030",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0032",
+    "address": "0x4032",
+    "label": "comic_PtrTable_1F_0032",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x0034",
+    "address": "0x4034",
+    "label": "comic_PtrTable_1F_0034",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x1110",
+    "address": "0x5110",
+    "label": "comic_TileCandidate_1F_1110",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x1F",
+    "bank_offset": "0x3F00",
+    "address": "0x7F00",
+    "label": "comic_TileCandidate_1F_3F00",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x20",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank20_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x20",
+    "bank_offset": "0x17C0",
+    "address": "0x57C0",
+    "label": "comic_TileCandidate_20_17C0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x21",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank21_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x21",
+    "bank_offset": "0x1D90",
+    "address": "0x5D90",
+    "label": "comic_TileCandidate_21_1D90",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x21",
+    "bank_offset": "0x2080",
+    "address": "0x6080",
+    "label": "comic_TileCandidate_21_2080",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x21",
+    "bank_offset": "0x26A0",
+    "address": "0x66A0",
+    "label": "comic_TileCandidate_21_26A0",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x21",
+    "bank_offset": "0x3250",
+    "address": "0x7250",
+    "label": "comic_TileCandidate_21_3250",
+    "comment": "suspected 2bpp tile run"
+  },
+  {
+    "bank": "0x22",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank22_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x23",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank23_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x24",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank24_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x24",
+    "bank_offset": "0x38F4",
+    "address": "0x78F4",
+    "label": "comic_PtrTable_24_38F4",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x24",
+    "bank_offset": "0x38F6",
+    "address": "0x78F6",
+    "label": "comic_PtrTable_24_38F6",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x25",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank25_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x26",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank26_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x27",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank27_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x28",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank28_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x29",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank29_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x2A",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank2A_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x2B",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank2B_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x2C",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank2C_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x2D",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank2D_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x2E",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank2E_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x2F",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank2F_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x30",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank30_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x31",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank31_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x32",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank32_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x33",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank33_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x34",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank34_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x35",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank35_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x36",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank36_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x37",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank37_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x38",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank38_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x39",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank39_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x3A",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank3A_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x3B",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank3B_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x3C",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank3C_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x3D",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank3D_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x3E",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank3E_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x0000",
+    "address": "0x4000",
+    "label": "comic_Bank3F_Start",
+    "comment": "bank start"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DB6",
+    "address": "0x6DB6",
+    "label": "comic_PtrTable_3F_2DB6",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DB8",
+    "address": "0x6DB8",
+    "label": "comic_PtrTable_3F_2DB8",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DBA",
+    "address": "0x6DBA",
+    "label": "comic_PtrTable_3F_2DBA",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DBC",
+    "address": "0x6DBC",
+    "label": "comic_PtrTable_3F_2DBC",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DBE",
+    "address": "0x6DBE",
+    "label": "comic_PtrTable_3F_2DBE",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DC0",
+    "address": "0x6DC0",
+    "label": "comic_PtrTable_3F_2DC0",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DC2",
+    "address": "0x6DC2",
+    "label": "comic_PtrTable_3F_2DC2",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DC4",
+    "address": "0x6DC4",
+    "label": "comic_PtrTable_3F_2DC4",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DC6",
+    "address": "0x6DC6",
+    "label": "comic_PtrTable_3F_2DC6",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DC8",
+    "address": "0x6DC8",
+    "label": "comic_PtrTable_3F_2DC8",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DCA",
+    "address": "0x6DCA",
+    "label": "comic_PtrTable_3F_2DCA",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DCC",
+    "address": "0x6DCC",
+    "label": "comic_PtrTable_3F_2DCC",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DCE",
+    "address": "0x6DCE",
+    "label": "comic_PtrTable_3F_2DCE",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DD0",
+    "address": "0x6DD0",
+    "label": "comic_PtrTable_3F_2DD0",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DD2",
+    "address": "0x6DD2",
+    "label": "comic_PtrTable_3F_2DD2",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DD4",
+    "address": "0x6DD4",
+    "label": "comic_PtrTable_3F_2DD4",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DD6",
+    "address": "0x6DD6",
+    "label": "comic_PtrTable_3F_2DD6",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DD8",
+    "address": "0x6DD8",
+    "label": "comic_PtrTable_3F_2DD8",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DDA",
+    "address": "0x6DDA",
+    "label": "comic_PtrTable_3F_2DDA",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DDC",
+    "address": "0x6DDC",
+    "label": "comic_PtrTable_3F_2DDC",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DDE",
+    "address": "0x6DDE",
+    "label": "comic_PtrTable_3F_2DDE",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DE0",
+    "address": "0x6DE0",
+    "label": "comic_PtrTable_3F_2DE0",
+    "comment": "suspected pointer table"
+  },
+  {
+    "bank": "0x3F",
+    "bank_offset": "0x2DE2",
+    "address": "0x6DE2",
+    "label": "comic_PtrTable_3F_2DE2",
+    "comment": "suspected pointer table"
+  }
+]

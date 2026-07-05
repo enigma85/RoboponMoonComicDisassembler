@@ -1,0 +1,18 @@
+{
+  "target": "comic",
+  "entries": 4001,
+  "roundtrip_ok": 4001,
+  "streams": [
+    {
+      "stream": "dialogue",
+      "entries": 2000,
+      "roundtrip_ok": 2000
+    },
+    {
+      "stream": "descriptions",
+      "entries": 2001,
+      "roundtrip_ok": 2001
+    }
+  ],
+  "bad_examples": []
+}

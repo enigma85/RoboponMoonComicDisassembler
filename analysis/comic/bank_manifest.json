@@ -1,0 +1,514 @@
+[
+  {
+    "bank": 0,
+    "file": "banks/comic/bank_00.bin",
+    "sha1": "0a165d23a64e73b0c3625c665d83727c0a14abb8",
+    "size": 16384,
+    "non_ff_bytes": 16292,
+    "non_00_bytes": 14515
+  },
+  {
+    "bank": 1,
+    "file": "banks/comic/bank_01.bin",
+    "sha1": "5bd048441cee7d72638feebcf044e5e619763881",
+    "size": 16384,
+    "non_ff_bytes": 16270,
+    "non_00_bytes": 10469
+  },
+  {
+    "bank": 2,
+    "file": "banks/comic/bank_02.bin",
+    "sha1": "7fef8c2368b309be8d2d0b137082274c0ba01326",
+    "size": 16384,
+    "non_ff_bytes": 16282,
+    "non_00_bytes": 15706
+  },
+  {
+    "bank": 3,
+    "file": "banks/comic/bank_03.bin",
+    "sha1": "9f2bdc4f34dd5a5d642d8f023c42827ed315d6a4",
+    "size": 16384,
+    "non_ff_bytes": 16334,
+    "non_00_bytes": 14893
+  },
+  {
+    "bank": 4,
+    "file": "banks/comic/bank_04.bin",
+    "sha1": "1ed551a0c1dbdc1f823db547c0a68e51186b46e8",
+    "size": 16384,
+    "non_ff_bytes": 16362,
+    "non_00_bytes": 13082
+  },
+  {
+    "bank": 5,
+    "file": "banks/comic/bank_05.bin",
+    "sha1": "381f28c0f977b3072fb9226a71cbed2c463ee033",
+    "size": 16384,
+    "non_ff_bytes": 16205,
+    "non_00_bytes": 15422
+  },
+  {
+    "bank": 6,
+    "file": "banks/comic/bank_06.bin",
+    "sha1": "1108628676cd77e259f8bce387f923bd0cb72715",
+    "size": 16384,
+    "non_ff_bytes": 13860,
+    "non_00_bytes": 14205
+  },
+  {
+    "bank": 7,
+    "file": "banks/comic/bank_07.bin",
+    "sha1": "9e41f832aa60ea9f4b6533fb5ebbe8a958f361b8",
+    "size": 16384,
+    "non_ff_bytes": 16359,
+    "non_00_bytes": 14179
+  },
+  {
+    "bank": 8,
+    "file": "banks/comic/bank_08.bin",
+    "sha1": "1f1933f573628f9722cd292975490f895781a196",
+    "size": 16384,
+    "non_ff_bytes": 16321,
+    "non_00_bytes": 14334
+  },
+  {
+    "bank": 9,
+    "file": "banks/comic/bank_09.bin",
+    "sha1": "33102035a7e450dedfcf7a930ff3b778c86d92a5",
+    "size": 16384,
+    "non_ff_bytes": 16381,
+    "non_00_bytes": 13364
+  },
+  {
+    "bank": 10,
+    "file": "banks/comic/bank_0A.bin",
+    "sha1": "d20b76e9062f0f533616592a773f2e250b6d3653",
+    "size": 16384,
+    "non_ff_bytes": 16380,
+    "non_00_bytes": 15641
+  },
+  {
+    "bank": 11,
+    "file": "banks/comic/bank_0B.bin",
+    "sha1": "a4363df2f5c780e37901dd083d564fa3f95ee8d4",
+    "size": 16384,
+    "non_ff_bytes": 16362,
+    "non_00_bytes": 14951
+  },
+  {
+    "bank": 12,
+    "file": "banks/comic/bank_0C.bin",
+    "sha1": "723b6fbe1f0d772a75e329b7e8d67a836bbd39ed",
+    "size": 16384,
+    "non_ff_bytes": 16277,
+    "non_00_bytes": 15223
+  },
+  {
+    "bank": 13,
+    "file": "banks/comic/bank_0D.bin",
+    "sha1": "e400e97ea280c3528d1ac5771c0881919ac219cd",
+    "size": 16384,
+    "non_ff_bytes": 16245,
+    "non_00_bytes": 15808
+  },
+  {
+    "bank": 14,
+    "file": "banks/comic/bank_0E.bin",
+    "sha1": "aff4e5d57fd05d474885479b359634d86f05cee8",
+    "size": 16384,
+    "non_ff_bytes": 16292,
+    "non_00_bytes": 16344
+  },
+  {
+    "bank": 15,
+    "file": "banks/comic/bank_0F.bin",
+    "sha1": "3dc2ab7cc7d84546176d9fd47c0e9843ed405139",
+    "size": 16384,
+    "non_ff_bytes": 16252,
+    "non_00_bytes": 16348
+  },
+  {
+    "bank": 16,
+    "file": "banks/comic/bank_10.bin",
+    "sha1": "896d1ba298abab8c95f264f28a2bc85068672235",
+    "size": 16384,
+    "non_ff_bytes": 16259,
+    "non_00_bytes": 16352
+  },
+  {
+    "bank": 17,
+    "file": "banks/comic/bank_11.bin",
+    "sha1": "d03e7a2419911c2b5125fcc842035f3a346ebfb8",
+    "size": 16384,
+    "non_ff_bytes": 16275,
+    "non_00_bytes": 16114
+  },
+  {
+    "bank": 18,
+    "file": "banks/comic/bank_12.bin",
+    "sha1": "e3af42021f86f2fa69e569336cd2e543f0333ce8",
+    "size": 16384,
+    "non_ff_bytes": 16297,
+    "non_00_bytes": 15388
+  },
+  {
+    "bank": 19,
+    "file": "banks/comic/bank_13.bin",
+    "sha1": "76d41dbf3203c9bc2713fce979ec99ed79233be1",
+    "size": 16384,
+    "non_ff_bytes": 16290,
+    "non_00_bytes": 15421
+  },
+  {
+    "bank": 20,
+    "file": "banks/comic/bank_14.bin",
+    "sha1": "dc290d5e7ce2899cd3aa70f9612faa9e68a231e9",
+    "size": 16384,
+    "non_ff_bytes": 16288,
+    "non_00_bytes": 14384
+  },
+  {
+    "bank": 21,
+    "file": "banks/comic/bank_15.bin",
+    "sha1": "55d373095a99b4cafa18cdd98c60d019f57590ab",
+    "size": 16384,
+    "non_ff_bytes": 16274,
+    "non_00_bytes": 14893
+  },
+  {
+    "bank": 22,
+    "file": "banks/comic/bank_16.bin",
+    "sha1": "66942d4bf9729b264ca41925150186624ae60c4c",
+    "size": 16384,
+    "non_ff_bytes": 16178,
+    "non_00_bytes": 13676
+  },
+  {
+    "bank": 23,
+    "file": "banks/comic/bank_17.bin",
+    "sha1": "7868411132da02eefd9a4bd0d77102ac7255c314",
+    "size": 16384,
+    "non_ff_bytes": 15939,
+    "non_00_bytes": 13247
+  },
+  {
+    "bank": 24,
+    "file": "banks/comic/bank_18.bin",
+    "sha1": "86358e837e39c1440b004aabd4957b398273b63c",
+    "size": 16384,
+    "non_ff_bytes": 16043,
+    "non_00_bytes": 14209
+  },
+  {
+    "bank": 25,
+    "file": "banks/comic/bank_19.bin",
+    "sha1": "37c7766afd79ce2a9b6e4d46faf5f00c1cdc8fbd",
+    "size": 16384,
+    "non_ff_bytes": 16234,
+    "non_00_bytes": 12394
+  },
+  {
+    "bank": 26,
+    "file": "banks/comic/bank_1A.bin",
+    "sha1": "9e2be78cc7eae511b89d318eb89b5782bf718196",
+    "size": 16384,
+    "non_ff_bytes": 16302,
+    "non_00_bytes": 14734
+  },
+  {
+    "bank": 27,
+    "file": "banks/comic/bank_1B.bin",
+    "sha1": "e28251d7dcfc77024998d7fdf5b8d514c08d15f8",
+    "size": 16384,
+    "non_ff_bytes": 16359,
+    "non_00_bytes": 14221
+  },
+  {
+    "bank": 28,
+    "file": "banks/comic/bank_1C.bin",
+    "sha1": "d44eccde485985aedbe09747c02f3e4ba4e14e8f",
+    "size": 16384,
+    "non_ff_bytes": 16109,
+    "non_00_bytes": 15573
+  },
+  {
+    "bank": 29,
+    "file": "banks/comic/bank_1D.bin",
+    "sha1": "9cf2edc64f67acfb8da6658ffc13c6b317a5efc0",
+    "size": 16384,
+    "non_ff_bytes": 15969,
+    "non_00_bytes": 14718
+  },
+  {
+    "bank": 30,
+    "file": "banks/comic/bank_1E.bin",
+    "sha1": "e1f1c0814b8ba0002904b6c06f0a50abb44d06d7",
+    "size": 16384,
+    "non_ff_bytes": 16080,
+    "non_00_bytes": 15543
+  },
+  {
+    "bank": 31,
+    "file": "banks/comic/bank_1F.bin",
+    "sha1": "4eb05d2cbf0e4e01a0496508c498da6807630c28",
+    "size": 16384,
+    "non_ff_bytes": 16152,
+    "non_00_bytes": 15224
+  },
+  {
+    "bank": 32,
+    "file": "banks/comic/bank_20.bin",
+    "sha1": "26d513f7cb64e45ebf3ad021b88bb31b665072f0",
+    "size": 16384,
+    "non_ff_bytes": 16194,
+    "non_00_bytes": 15250
+  },
+  {
+    "bank": 33,
+    "file": "banks/comic/bank_21.bin",
+    "sha1": "90ff0b166ae8fec4e21b0d0ac3f22571f05b1d7f",
+    "size": 16384,
+    "non_ff_bytes": 16208,
+    "non_00_bytes": 14640
+  },
+  {
+    "bank": 34,
+    "file": "banks/comic/bank_22.bin",
+    "sha1": "c50babf122d1df46d226d21d13d72eb7f2d0c6e1",
+    "size": 16384,
+    "non_ff_bytes": 16220,
+    "non_00_bytes": 13037
+  },
+  {
+    "bank": 35,
+    "file": "banks/comic/bank_23.bin",
+    "sha1": "b5e5f757b8d98bec199739324e8a8b3135eced43",
+    "size": 16384,
+    "non_ff_bytes": 16243,
+    "non_00_bytes": 16006
+  },
+  {
+    "bank": 36,
+    "file": "banks/comic/bank_24.bin",
+    "sha1": "6d43a156f12140e25c5713b14ab15c88938b9336",
+    "size": 16384,
+    "non_ff_bytes": 16257,
+    "non_00_bytes": 15122
+  },
+  {
+    "bank": 37,
+    "file": "banks/comic/bank_25.bin",
+    "sha1": "f5e1f52037112e0b339da3b3b74b20b5ccfd887e",
+    "size": 16384,
+    "non_ff_bytes": 16243,
+    "non_00_bytes": 12895
+  },
+  {
+    "bank": 38,
+    "file": "banks/comic/bank_26.bin",
+    "sha1": "fbaf63ae88c3946ab65e9e2fef8074883267f9d1",
+    "size": 16384,
+    "non_ff_bytes": 16351,
+    "non_00_bytes": 13563
+  },
+  {
+    "bank": 39,
+    "file": "banks/comic/bank_27.bin",
+    "sha1": "baf40c6bbd2a3eb7ec1211f8dd4c5e58e1206880",
+    "size": 16384,
+    "non_ff_bytes": 16157,
+    "non_00_bytes": 14614
+  },
+  {
+    "bank": 40,
+    "file": "banks/comic/bank_28.bin",
+    "sha1": "11646724a4e6cfb931d84f776d9dbdf2fb81d7bd",
+    "size": 16384,
+    "non_ff_bytes": 16299,
+    "non_00_bytes": 14821
+  },
+  {
+    "bank": 41,
+    "file": "banks/comic/bank_29.bin",
+    "sha1": "3ccfd6afeb61e8131b00e6ea4062f9e18bab37aa",
+    "size": 16384,
+    "non_ff_bytes": 16174,
+    "non_00_bytes": 14857
+  },
+  {
+    "bank": 42,
+    "file": "banks/comic/bank_2A.bin",
+    "sha1": "d63de928ceb4d7be4aafc5c5598b695a98450eaf",
+    "size": 16384,
+    "non_ff_bytes": 16133,
+    "non_00_bytes": 15162
+  },
+  {
+    "bank": 43,
+    "file": "banks/comic/bank_2B.bin",
+    "sha1": "8614245c06bc64d27ec0cfa49968cb3376fe7b30",
+    "size": 16384,
+    "non_ff_bytes": 16295,
+    "non_00_bytes": 12992
+  },
+  {
+    "bank": 44,
+    "file": "banks/comic/bank_2C.bin",
+    "sha1": "3dd10c4f8f7559a41d6e12cad7ea3511125171a4",
+    "size": 16384,
+    "non_ff_bytes": 16198,
+    "non_00_bytes": 15380
+  },
+  {
+    "bank": 45,
+    "file": "banks/comic/bank_2D.bin",
+    "sha1": "fc2ee8db107ba2d889e66ac96341826d1e151bff",
+    "size": 16384,
+    "non_ff_bytes": 16272,
+    "non_00_bytes": 15102
+  },
+  {
+    "bank": 46,
+    "file": "banks/comic/bank_2E.bin",
+    "sha1": "d584343b87c1fa785d267ce131f34740c8f71655",
+    "size": 16384,
+    "non_ff_bytes": 16027,
+    "non_00_bytes": 13605
+  },
+  {
+    "bank": 47,
+    "file": "banks/comic/bank_2F.bin",
+    "sha1": "b740cb2954eb94c8276565e6e3ef45c7d69b5298",
+    "size": 16384,
+    "non_ff_bytes": 16323,
+    "non_00_bytes": 13399
+  },
+  {
+    "bank": 48,
+    "file": "banks/comic/bank_30.bin",
+    "sha1": "d65ba7ffedace48bc6045907010d0a0ea66c5ff7",
+    "size": 16384,
+    "non_ff_bytes": 15984,
+    "non_00_bytes": 15316
+  },
+  {
+    "bank": 49,
+    "file": "banks/comic/bank_31.bin",
+    "sha1": "1c842607faead22dcd1c9fd7be74a234ffe89608",
+    "size": 16384,
+    "non_ff_bytes": 16208,
+    "non_00_bytes": 14899
+  },
+  {
+    "bank": 50,
+    "file": "banks/comic/bank_32.bin",
+    "sha1": "b9b3c01167242dc8c36811fe7485e06bf1ce2fda",
+    "size": 16384,
+    "non_ff_bytes": 16270,
+    "non_00_bytes": 13323
+  },
+  {
+    "bank": 51,
+    "file": "banks/comic/bank_33.bin",
+    "sha1": "b11c4c49b95f84a438b3e819be1e54384d36513c",
+    "size": 16384,
+    "non_ff_bytes": 16345,
+    "non_00_bytes": 11775
+  },
+  {
+    "bank": 52,
+    "file": "banks/comic/bank_34.bin",
+    "sha1": "d402a29b54151cbb2d8294c2fa0c25d72664efc7",
+    "size": 16384,
+    "non_ff_bytes": 16239,
+    "non_00_bytes": 15204
+  },
+  {
+    "bank": 53,
+    "file": "banks/comic/bank_35.bin",
+    "sha1": "23ae8e16d7278380ca93fadc55ef5d79dbca43d2",
+    "size": 16384,
+    "non_ff_bytes": 16152,
+    "non_00_bytes": 13660
+  },
+  {
+    "bank": 54,
+    "file": "banks/comic/bank_36.bin",
+    "sha1": "516653b5ccf398b7bc36c201db025f0cada13e11",
+    "size": 16384,
+    "non_ff_bytes": 15762,
+    "non_00_bytes": 13148
+  },
+  {
+    "bank": 55,
+    "file": "banks/comic/bank_37.bin",
+    "sha1": "6f8a48ca7c2010249a387fb038f6db0c1a26765b",
+    "size": 16384,
+    "non_ff_bytes": 16221,
+    "non_00_bytes": 13277
+  },
+  {
+    "bank": 56,
+    "file": "banks/comic/bank_38.bin",
+    "sha1": "615b8df7e046270277ae2249f7c132c8ff770ca4",
+    "size": 16384,
+    "non_ff_bytes": 15754,
+    "non_00_bytes": 12736
+  },
+  {
+    "bank": 57,
+    "file": "banks/comic/bank_39.bin",
+    "sha1": "ce66d50d03c72665d1ba344d5edc3b4838f47cbd",
+    "size": 16384,
+    "non_ff_bytes": 13329,
+    "non_00_bytes": 14970
+  },
+  {
+    "bank": 58,
+    "file": "banks/comic/bank_3A.bin",
+    "sha1": "bfed9b2505a2201bb664a3f6ae0d5a67a32db9c5",
+    "size": 16384,
+    "non_ff_bytes": 16132,
+    "non_00_bytes": 15329
+  },
+  {
+    "bank": 59,
+    "file": "banks/comic/bank_3B.bin",
+    "sha1": "50a7b730581e7a0ea60ab73c4fc8463c49b26a8a",
+    "size": 16384,
+    "non_ff_bytes": 16148,
+    "non_00_bytes": 15882
+  },
+  {
+    "bank": 60,
+    "file": "banks/comic/bank_3C.bin",
+    "sha1": "ccb5326f0f0b54c277997298c0b36a0fa40486b1",
+    "size": 16384,
+    "non_ff_bytes": 16154,
+    "non_00_bytes": 15699
+  },
+  {
+    "bank": 61,
+    "file": "banks/comic/bank_3D.bin",
+    "sha1": "26533a720084a1ceda910bc55bc5a2859cb7e775",
+    "size": 16384,
+    "non_ff_bytes": 16141,
+    "non_00_bytes": 15421
+  },
+  {
+    "bank": 62,
+    "file": "banks/comic/bank_3E.bin",
+    "sha1": "b765398691fe7d465d746cecdcabd51428a7558b",
+    "size": 16384,
+    "non_ff_bytes": 16214,
+    "non_00_bytes": 14696
+  },
+  {
+    "bank": 63,
+    "file": "banks/comic/bank_3F.bin",
+    "sha1": "cb0366bfd6028e346dd8e75345fc139a58f8198e",
+    "size": 16384,
+    "non_ff_bytes": 15648,
+    "non_00_bytes": 13335
+  }
+]

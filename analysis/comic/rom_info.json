@@ -1,0 +1,16 @@
+{
+  "target": "comic",
+  "size": 1048576,
+  "banks": 64,
+  "sha1": "79d1eda07e792497506ff1494e5222db2a52702f",
+  "header": {
+    "title_raw_hex": "524f424f20424f4d0000004835554a80",
+    "title_ascii_lossy": "ROBO BOM",
+    "cgb_flag": "0x80",
+    "cart_type": "0xFE",
+    "rom_size_code": "0x05",
+    "ram_size_code": "0x03",
+    "header_checksum": "0x76",
+    "global_checksum": "0x4527"
+  }
+}

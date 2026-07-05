@@ -1,0 +1,14 @@
+[
+  {
+    "stream": "dialogue",
+    "table": "0x038000",
+    "tree": "0x0016DA",
+    "leaf_count": 77
+  },
+  {
+    "stream": "descriptions",
+    "table": "0x048000",
+    "tree": "0x04B900",
+    "leaf_count": 73
+  }
+]

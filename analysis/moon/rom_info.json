@@ -1,0 +1,16 @@
+{
+  "target": "moon",
+  "size": 1048576,
+  "banks": 64,
+  "sha1": "7d6424bfecfeb17aee9f779dcb9bac47114730cd",
+  "header": {
+    "title_raw_hex": "524f424f204d4f4f4e00004833554a80",
+    "title_ascii_lossy": "ROBO MOON",
+    "cgb_flag": "0x80",
+    "cart_type": "0xFE",
+    "rom_size_code": "0x05",
+    "ram_size_code": "0x03",
+    "header_checksum": "0x1D",
+    "global_checksum": "0x9E0A"
+  }
+}

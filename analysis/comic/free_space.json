@@ -1,0 +1,986 @@
+[
+  {
+    "offset": "0x0001BA",
+    "bank": "0x00",
+    "bank_offset": "0x01BA",
+    "address": "0x01BA",
+    "length": 38,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x00029E",
+    "bank": "0x00",
+    "bank_offset": "0x029E",
+    "address": "0x029E",
+    "length": 95,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x00048F",
+    "bank": "0x00",
+    "bank_offset": "0x048F",
+    "address": "0x048F",
+    "length": 113,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x000D3A",
+    "bank": "0x00",
+    "bank_offset": "0x0D3A",
+    "address": "0x0D3A",
+    "length": 198,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0038B2",
+    "bank": "0x00",
+    "bank_offset": "0x38B2",
+    "address": "0x38B2",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x003D9C",
+    "bank": "0x00",
+    "bank_offset": "0x3D9C",
+    "address": "0x3D9C",
+    "length": 484,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x003F96",
+    "bank": "0x00",
+    "bank_offset": "0x3F96",
+    "address": "0x3F96",
+    "length": 74,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x004B00",
+    "bank": "0x01",
+    "bank_offset": "0x0B00",
+    "address": "0x4B00",
+    "length": 40,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x004E52",
+    "bank": "0x01",
+    "bank_offset": "0x0E52",
+    "address": "0x4E52",
+    "length": 1296,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0053B2",
+    "bank": "0x01",
+    "bank_offset": "0x13B2",
+    "address": "0x53B2",
+    "length": 3440,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x006818",
+    "bank": "0x01",
+    "bank_offset": "0x2818",
+    "address": "0x6818",
+    "length": 57,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x007FB7",
+    "bank": "0x01",
+    "bank_offset": "0x3FB7",
+    "address": "0x7FB7",
+    "length": 73,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x00FDF3",
+    "bank": "0x03",
+    "bank_offset": "0x3DF3",
+    "address": "0x7DF3",
+    "length": 525,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x013729",
+    "bank": "0x04",
+    "bank_offset": "0x3729",
+    "address": "0x7729",
+    "length": 2263,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x017FE4",
+    "bank": "0x05",
+    "bank_offset": "0x3FE4",
+    "address": "0x7FE4",
+    "length": 44,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0183C0",
+    "bank": "0x06",
+    "bank_offset": "0x03C0",
+    "address": "0x43C0",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x018510",
+    "bank": "0x06",
+    "bank_offset": "0x0510",
+    "address": "0x4510",
+    "length": 34,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x018DAF",
+    "bank": "0x06",
+    "bank_offset": "0x0DAF",
+    "address": "0x4DAF",
+    "length": 81,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x019800",
+    "bank": "0x06",
+    "bank_offset": "0x1800",
+    "address": "0x5800",
+    "length": 64,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0198FF",
+    "bank": "0x06",
+    "bank_offset": "0x18FF",
+    "address": "0x58FF",
+    "length": 65,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x019A00",
+    "bank": "0x06",
+    "bank_offset": "0x1A00",
+    "address": "0x5A00",
+    "length": 64,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x019B00",
+    "bank": "0x06",
+    "bank_offset": "0x1B00",
+    "address": "0x5B00",
+    "length": 64,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x019C00",
+    "bank": "0x06",
+    "bank_offset": "0x1C00",
+    "address": "0x5C00",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x019D00",
+    "bank": "0x06",
+    "bank_offset": "0x1D00",
+    "address": "0x5D00",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x01B600",
+    "bank": "0x06",
+    "bank_offset": "0x3600",
+    "address": "0x7600",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x01B700",
+    "bank": "0x06",
+    "bank_offset": "0x3700",
+    "address": "0x7700",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x01BC60",
+    "bank": "0x06",
+    "bank_offset": "0x3C60",
+    "address": "0x7C60",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x01BD60",
+    "bank": "0x06",
+    "bank_offset": "0x3D60",
+    "address": "0x7D60",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x01BFCF",
+    "bank": "0x06",
+    "bank_offset": "0x3FCF",
+    "address": "0x7FCF",
+    "length": 50,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x01FBCB",
+    "bank": "0x07",
+    "bank_offset": "0x3BCB",
+    "address": "0x7BCB",
+    "length": 1077,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x023C36",
+    "bank": "0x08",
+    "bank_offset": "0x3C36",
+    "address": "0x7C36",
+    "length": 970,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x027784",
+    "bank": "0x09",
+    "bank_offset": "0x3784",
+    "address": "0x7784",
+    "length": 2173,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x02BF6D",
+    "bank": "0x0A",
+    "bank_offset": "0x3F6D",
+    "address": "0x7F6D",
+    "length": 147,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x02FC26",
+    "bank": "0x0B",
+    "bank_offset": "0x3C26",
+    "address": "0x7C26",
+    "length": 986,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x033F6A",
+    "bank": "0x0C",
+    "bank_offset": "0x3F6A",
+    "address": "0x7F6A",
+    "length": 154,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x037ECC",
+    "bank": "0x0D",
+    "bank_offset": "0x3ECC",
+    "address": "0x7ECC",
+    "length": 308,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x047F0A",
+    "bank": "0x11",
+    "bank_offset": "0x3F0A",
+    "address": "0x7F0A",
+    "length": 246,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x04BC2F",
+    "bank": "0x12",
+    "bank_offset": "0x3C2F",
+    "address": "0x7C2F",
+    "length": 977,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x04FF7B",
+    "bank": "0x13",
+    "bank_offset": "0x3F7B",
+    "address": "0x7F7B",
+    "length": 133,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x053BAA",
+    "bank": "0x14",
+    "bank_offset": "0x3BAA",
+    "address": "0x7BAA",
+    "length": 1110,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x057F3A",
+    "bank": "0x15",
+    "bank_offset": "0x3F3A",
+    "address": "0x7F3A",
+    "length": 210,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0581C0",
+    "bank": "0x16",
+    "bank_offset": "0x01C0",
+    "address": "0x41C0",
+    "length": 48,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x058470",
+    "bank": "0x16",
+    "bank_offset": "0x0470",
+    "address": "0x4470",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0584F0",
+    "bank": "0x16",
+    "bank_offset": "0x04F0",
+    "address": "0x44F0",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x058570",
+    "bank": "0x16",
+    "bank_offset": "0x0570",
+    "address": "0x4570",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0585F0",
+    "bank": "0x16",
+    "bank_offset": "0x05F0",
+    "address": "0x45F0",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x058670",
+    "bank": "0x16",
+    "bank_offset": "0x0670",
+    "address": "0x4670",
+    "length": 416,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x05886F",
+    "bank": "0x16",
+    "bank_offset": "0x086F",
+    "address": "0x486F",
+    "length": 37,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0588F0",
+    "bank": "0x16",
+    "bank_offset": "0x08F0",
+    "address": "0x48F0",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x058970",
+    "bank": "0x16",
+    "bank_offset": "0x0970",
+    "address": "0x4970",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0589F0",
+    "bank": "0x16",
+    "bank_offset": "0x09F0",
+    "address": "0x49F0",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x058A6F",
+    "bank": "0x16",
+    "bank_offset": "0x0A6F",
+    "address": "0x4A6F",
+    "length": 401,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x05BE5F",
+    "bank": "0x16",
+    "bank_offset": "0x3E5F",
+    "address": "0x7E5F",
+    "length": 417,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x05F5E3",
+    "bank": "0x17",
+    "bank_offset": "0x35E3",
+    "address": "0x75E3",
+    "length": 42,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x05F85D",
+    "bank": "0x17",
+    "bank_offset": "0x385D",
+    "address": "0x785D",
+    "length": 36,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x05F91B",
+    "bank": "0x17",
+    "bank_offset": "0x391B",
+    "address": "0x791B",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x05F95B",
+    "bank": "0x17",
+    "bank_offset": "0x395B",
+    "address": "0x795B",
+    "length": 32,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x05F99D",
+    "bank": "0x17",
+    "bank_offset": "0x399D",
+    "address": "0x799D",
+    "length": 40,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x05FA17",
+    "bank": "0x17",
+    "bank_offset": "0x3A17",
+    "address": "0x7A17",
+    "length": 42,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x05FA59",
+    "bank": "0x17",
+    "bank_offset": "0x3A59",
+    "address": "0x7A59",
+    "length": 34,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x05FA97",
+    "bank": "0x17",
+    "bank_offset": "0x3A97",
+    "address": "0x7A97",
+    "length": 1385,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x063F04",
+    "bank": "0x18",
+    "bank_offset": "0x3F04",
+    "address": "0x7F04",
+    "length": 252,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x06705C",
+    "bank": "0x19",
+    "bank_offset": "0x305C",
+    "address": "0x705C",
+    "length": 295,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x067A04",
+    "bank": "0x19",
+    "bank_offset": "0x3A04",
+    "address": "0x7A04",
+    "length": 1532,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x06BDDA",
+    "bank": "0x1A",
+    "bank_offset": "0x3DDA",
+    "address": "0x7DDA",
+    "length": 550,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x06FB50",
+    "bank": "0x1B",
+    "bank_offset": "0x3B50",
+    "address": "0x7B50",
+    "length": 1200,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0712A2",
+    "bank": "0x1C",
+    "bank_offset": "0x12A2",
+    "address": "0x52A2",
+    "length": 54,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x073F5A",
+    "bank": "0x1C",
+    "bank_offset": "0x3F5A",
+    "address": "0x7F5A",
+    "length": 166,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x075245",
+    "bank": "0x1D",
+    "bank_offset": "0x1245",
+    "address": "0x5245",
+    "length": 93,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0752D8",
+    "bank": "0x1D",
+    "bank_offset": "0x12D8",
+    "address": "0x52D8",
+    "length": 81,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x077F5A",
+    "bank": "0x1D",
+    "bank_offset": "0x3F5A",
+    "address": "0x7F5A",
+    "length": 166,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x07FEE0",
+    "bank": "0x1F",
+    "bank_offset": "0x3EE0",
+    "address": "0x7EE0",
+    "length": 43,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x083F26",
+    "bank": "0x20",
+    "bank_offset": "0x3F26",
+    "address": "0x7F26",
+    "length": 218,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x087EEF",
+    "bank": "0x21",
+    "bank_offset": "0x3EEF",
+    "address": "0x7EEF",
+    "length": 273,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x08B85F",
+    "bank": "0x22",
+    "bank_offset": "0x385F",
+    "address": "0x785F",
+    "length": 1953,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x08FFD8",
+    "bank": "0x23",
+    "bank_offset": "0x3FD8",
+    "address": "0x7FD8",
+    "length": 40,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x093F82",
+    "bank": "0x24",
+    "bank_offset": "0x3F82",
+    "address": "0x7F82",
+    "length": 126,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x09741D",
+    "bank": "0x25",
+    "bank_offset": "0x341D",
+    "address": "0x741D",
+    "length": 3043,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x09B6A7",
+    "bank": "0x26",
+    "bank_offset": "0x36A7",
+    "address": "0x76A7",
+    "length": 2393,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x09FD04",
+    "bank": "0x27",
+    "bank_offset": "0x3D04",
+    "address": "0x7D04",
+    "length": 764,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0A3F81",
+    "bank": "0x28",
+    "bank_offset": "0x3F81",
+    "address": "0x7F81",
+    "length": 127,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0A7BE6",
+    "bank": "0x29",
+    "bank_offset": "0x3BE6",
+    "address": "0x7BE6",
+    "length": 1050,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0ABF64",
+    "bank": "0x2A",
+    "bank_offset": "0x3F64",
+    "address": "0x7F64",
+    "length": 156,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0AF509",
+    "bank": "0x2B",
+    "bank_offset": "0x3509",
+    "address": "0x7509",
+    "length": 2807,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0B3E54",
+    "bank": "0x2C",
+    "bank_offset": "0x3E54",
+    "address": "0x7E54",
+    "length": 428,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0B7DD1",
+    "bank": "0x2D",
+    "bank_offset": "0x3DD1",
+    "address": "0x7DD1",
+    "length": 559,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0BB871",
+    "bank": "0x2E",
+    "bank_offset": "0x3871",
+    "address": "0x7871",
+    "length": 1935,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0BE1A6",
+    "bank": "0x2F",
+    "bank_offset": "0x21A6",
+    "address": "0x61A6",
+    "length": 36,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0BF78B",
+    "bank": "0x2F",
+    "bank_offset": "0x378B",
+    "address": "0x778B",
+    "length": 2165,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0C3F00",
+    "bank": "0x30",
+    "bank_offset": "0x3F00",
+    "address": "0x7F00",
+    "length": 260,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0C7CA3",
+    "bank": "0x31",
+    "bank_offset": "0x3CA3",
+    "address": "0x7CA3",
+    "length": 861,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0CBA28",
+    "bank": "0x32",
+    "bank_offset": "0x3A28",
+    "address": "0x7A28",
+    "length": 1496,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0CF207",
+    "bank": "0x33",
+    "bank_offset": "0x3207",
+    "address": "0x7207",
+    "length": 3577,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0D3EF4",
+    "bank": "0x34",
+    "bank_offset": "0x3EF4",
+    "address": "0x7EF4",
+    "length": 268,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0D7A7E",
+    "bank": "0x35",
+    "bank_offset": "0x3A7E",
+    "address": "0x7A7E",
+    "length": 1432,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0D8863",
+    "bank": "0x36",
+    "bank_offset": "0x0863",
+    "address": "0x4863",
+    "length": 322,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0D89C7",
+    "bank": "0x36",
+    "bank_offset": "0x09C7",
+    "address": "0x49C7",
+    "length": 201,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0D8B4E",
+    "bank": "0x36",
+    "bank_offset": "0x0B4E",
+    "address": "0x4B4E",
+    "length": 163,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0D8C02",
+    "bank": "0x36",
+    "bank_offset": "0x0C02",
+    "address": "0x4C02",
+    "length": 183,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0DBD9A",
+    "bank": "0x36",
+    "bank_offset": "0x3D9A",
+    "address": "0x7D9A",
+    "length": 614,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0DF3E6",
+    "bank": "0x37",
+    "bank_offset": "0x33E6",
+    "address": "0x73E6",
+    "length": 1066,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0DF92E",
+    "bank": "0x37",
+    "bank_offset": "0x392E",
+    "address": "0x792E",
+    "length": 1762,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0E05B0",
+    "bank": "0x38",
+    "bank_offset": "0x05B0",
+    "address": "0x45B0",
+    "length": 274,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0E37E5",
+    "bank": "0x38",
+    "bank_offset": "0x37E5",
+    "address": "0x77E5",
+    "length": 2091,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0E4DB0",
+    "bank": "0x39",
+    "bank_offset": "0x0DB0",
+    "address": "0x4DB0",
+    "length": 80,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0E5800",
+    "bank": "0x39",
+    "bank_offset": "0x1800",
+    "address": "0x5800",
+    "length": 64,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0E5900",
+    "bank": "0x39",
+    "bank_offset": "0x1900",
+    "address": "0x5900",
+    "length": 64,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0E5A00",
+    "bank": "0x39",
+    "bank_offset": "0x1A00",
+    "address": "0x5A00",
+    "length": 64,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0E5AFE",
+    "bank": "0x39",
+    "bank_offset": "0x1AFE",
+    "address": "0x5AFE",
+    "length": 67,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0E5C00",
+    "bank": "0x39",
+    "bank_offset": "0x1C00",
+    "address": "0x5C00",
+    "length": 32,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0E5D00",
+    "bank": "0x39",
+    "bank_offset": "0x1D00",
+    "address": "0x5D00",
+    "length": 32,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0E7C60",
+    "bank": "0x39",
+    "bank_offset": "0x3C60",
+    "address": "0x7C60",
+    "length": 32,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0E7D60",
+    "bank": "0x39",
+    "bank_offset": "0x3D60",
+    "address": "0x7D60",
+    "length": 32,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0E7FD0",
+    "bank": "0x39",
+    "bank_offset": "0x3FD0",
+    "address": "0x7FD0",
+    "length": 48,
+    "value": "0xFF"
+  },
+  {
+    "offset": "0x0EBDA0",
+    "bank": "0x3A",
+    "bank_offset": "0x3DA0",
+    "address": "0x7DA0",
+    "length": 608,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0EFFB4",
+    "bank": "0x3B",
+    "bank_offset": "0x3FB4",
+    "address": "0x7FB4",
+    "length": 76,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0F3F12",
+    "bank": "0x3C",
+    "bank_offset": "0x3F12",
+    "address": "0x7F12",
+    "length": 238,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0F7E12",
+    "bank": "0x3D",
+    "bank_offset": "0x3E12",
+    "address": "0x7E12",
+    "length": 494,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0FBC16",
+    "bank": "0x3E",
+    "bank_offset": "0x3C16",
+    "address": "0x7C16",
+    "length": 1002,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0FE4A1",
+    "bank": "0x3F",
+    "bank_offset": "0x24A1",
+    "address": "0x64A1",
+    "length": 90,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0FEE3B",
+    "bank": "0x3F",
+    "bank_offset": "0x2E3B",
+    "address": "0x6E3B",
+    "length": 130,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0FEF1B",
+    "bank": "0x3F",
+    "bank_offset": "0x2F1B",
+    "address": "0x6F1B",
+    "length": 34,
+    "value": "0x00"
+  },
+  {
+    "offset": "0x0FFDBA",
+    "bank": "0x3F",
+    "bank_offset": "0x3DBA",
+    "address": "0x7DBA",
+    "length": 353,
+    "value": "0x00"
+  }
+]

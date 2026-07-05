@@ -1,0 +1,301 @@
+bank	bank_offset	address	label	comment
+0x00	0x0000	0x0000	comic_Bank00_Start	bank start
+0x00	0x0040	0x0040	comic_TileCandidate_00_0040	suspected 2bpp tile run
+0x00	0x006E	0x006E	comic_TextCandidate_00_006E	suspected text/data run
+0x00	0x0080	0x0080	comic_TextCandidate_00_0080	suspected text/data run
+0x00	0x0089	0x0089	comic_TextCandidate_00_0089	suspected text/data run
+0x00	0x009A	0x009A	comic_TextCandidate_00_009A	suspected text/data run
+0x00	0x00B5	0x00B5	comic_TextCandidate_00_00B5	suspected text/data run
+0x00	0x00C5	0x00C5	comic_TextCandidate_00_00C5	suspected text/data run
+0x00	0x00CE	0x00CE	comic_TextCandidate_00_00CE	suspected text/data run
+0x00	0x00DB	0x00DB	comic_TextCandidate_00_00DB	suspected text/data run
+0x00	0x0100	0x0100	EntryPoint	cartridge entry point
+0x00	0x0101	0x0101	comic_TextCandidate_00_0101	suspected text/data run
+0x00	0x0104	0x0104	NintendoLogo	Nintendo logo data
+0x00	0x011B	0x011B	comic_TextCandidate_00_011B	suspected text/data run
+0x00	0x0134	0x0134	ROMHeader_Title	ROM header title
+0x00	0x013F	0x013F	comic_TextCandidate_00_013F	suspected text/data run
+0x00	0x0143	0x0143	ROMHeader_CGBFlag	ROM header CGB flag
+0x00	0x0147	0x0147	ROMHeader_CartType	ROM header cart type
+0x00	0x014D	0x014D	ROMHeader_HeaderChecksum	ROM header checksum
+0x00	0x014E	0x014E	ROMHeader_GlobalChecksum	ROM header global checksum
+0x00	0x0150	0x0150	StartAfterHeader	first byte after ROM header
+0x00	0x015A	0x015A	comic_TextCandidate_00_015A	suspected text/data run
+0x00	0x0173	0x0173	comic_TextCandidate_00_0173	suspected text/data run
+0x00	0x0182	0x0182	comic_TextCandidate_00_0182	suspected text/data run
+0x00	0x018F	0x018F	comic_TextCandidate_00_018F	suspected text/data run
+0x00	0x01AF	0x01AF	comic_TextCandidate_00_01AF	suspected text/data run
+0x00	0x01BA	0x01BA	comic_FreeSpace_00_01BA	free-space run
+0x00	0x01E7	0x01E7	comic_TextCandidate_00_01E7	suspected text/data run
+0x00	0x01F3	0x01F3	comic_TextCandidate_00_01F3	suspected text/data run
+0x00	0x022E	0x022E	comic_TextCandidate_00_022E	suspected text/data run
+0x00	0x0239	0x0239	comic_TextCandidate_00_0239	suspected text/data run
+0x00	0x027A	0x027A	comic_TextCandidate_00_027A	suspected text/data run
+0x00	0x0294	0x0294	comic_TextCandidate_00_0294	suspected text/data run
+0x00	0x029E	0x029E	comic_FreeSpace_00_029E	free-space run
+0x00	0x02F0	0x02F0	comic_TileCandidate_00_02F0	suspected 2bpp tile run
+0x00	0x02FD	0x02FD	comic_TextCandidate_00_02FD	suspected text/data run
+0x00	0x0334	0x0334	comic_TextCandidate_00_0334	suspected text/data run
+0x00	0x034B	0x034B	comic_TextCandidate_00_034B	suspected text/data run
+0x00	0x0359	0x0359	comic_TextCandidate_00_0359	suspected text/data run
+0x00	0x036D	0x036D	comic_TextCandidate_00_036D	suspected text/data run
+0x00	0x038B	0x038B	comic_TextCandidate_00_038B	suspected text/data run
+0x00	0x03AC	0x03AC	comic_TextCandidate_00_03AC	suspected text/data run
+0x00	0x03BF	0x03BF	comic_TextCandidate_00_03BF	suspected text/data run
+0x00	0x03C9	0x03C9	comic_TextCandidate_00_03C9	suspected text/data run
+0x00	0x03FC	0x03FC	comic_TextCandidate_00_03FC	suspected text/data run
+0x00	0x0406	0x0406	comic_TextCandidate_00_0406	suspected text/data run
+0x00	0x0413	0x0413	comic_TextCandidate_00_0413	suspected text/data run
+0x00	0x0420	0x0420	comic_TextCandidate_00_0420	suspected text/data run
+0x00	0x0443	0x0443	comic_TextCandidate_00_0443	suspected text/data run
+0x00	0x0453	0x0453	comic_TextCandidate_00_0453	suspected text/data run
+0x00	0x0471	0x0471	comic_TextCandidate_00_0471	suspected text/data run
+0x00	0x048F	0x048F	comic_FreeSpace_00_048F	free-space run
+0x00	0x0500	0x0500	comic_TileCandidate_00_0500	suspected 2bpp tile run
+0x00	0x050D	0x050D	comic_TextCandidate_00_050D	suspected text/data run
+0x00	0x0516	0x0516	comic_TextCandidate_00_0516	suspected text/data run
+0x00	0x052B	0x052B	comic_TextCandidate_00_052B	suspected text/data run
+0x00	0x0545	0x0545	comic_TextCandidate_00_0545	suspected text/data run
+0x00	0x0558	0x0558	comic_TextCandidate_00_0558	suspected text/data run
+0x00	0x057D	0x057D	comic_TextCandidate_00_057D	suspected text/data run
+0x00	0x0588	0x0588	comic_TextCandidate_00_0588	suspected text/data run
+0x00	0x0593	0x0593	comic_TextCandidate_00_0593	suspected text/data run
+0x00	0x05AF	0x05AF	comic_TextCandidate_00_05AF	suspected text/data run
+0x00	0x05C6	0x05C6	comic_TextCandidate_00_05C6	suspected text/data run
+0x00	0x05DE	0x05DE	comic_TextCandidate_00_05DE	suspected text/data run
+0x00	0x05F5	0x05F5	comic_TextCandidate_00_05F5	suspected text/data run
+0x00	0x060C	0x060C	comic_TextCandidate_00_060C	suspected text/data run
+0x00	0x0625	0x0625	comic_TextCandidate_00_0625	suspected text/data run
+0x00	0x0636	0x0636	comic_TextCandidate_00_0636	suspected text/data run
+0x00	0x0671	0x0671	comic_TextCandidate_00_0671	suspected text/data run
+0x00	0x0686	0x0686	comic_TextCandidate_00_0686	suspected text/data run
+0x00	0x068F	0x068F	comic_TextCandidate_00_068F	suspected text/data run
+0x00	0x069D	0x069D	comic_TextCandidate_00_069D	suspected text/data run
+0x00	0x06D3	0x06D3	comic_TextCandidate_00_06D3	suspected text/data run
+0x00	0x06DF	0x06DF	comic_TextCandidate_00_06DF	suspected text/data run
+0x00	0x06EE	0x06EE	comic_TextCandidate_00_06EE	suspected text/data run
+0x00	0x06FA	0x06FA	comic_TextCandidate_00_06FA	suspected text/data run
+0x00	0x070D	0x070D	comic_TextCandidate_00_070D	suspected text/data run
+0x00	0x0721	0x0721	comic_TextCandidate_00_0721	suspected text/data run
+0x00	0x0730	0x0730	comic_TextCandidate_00_0730	suspected text/data run
+0x00	0x0D3A	0x0D3A	comic_FreeSpace_00_0D3A	free-space run
+0x00	0x0E00	0x0E00	comic_TileCandidate_00_0E00	suspected 2bpp tile run
+0x00	0x38B2	0x38B2	comic_FreeSpace_00_38B2	free-space run
+0x00	0x38D0	0x38D0	comic_TileCandidate_00_38D0	suspected 2bpp tile run
+0x00	0x3D9C	0x3D9C	comic_FreeSpace_00_3D9C	free-space run
+0x00	0x3F96	0x3F96	comic_FreeSpace_00_3F96	free-space run
+0x01	0x0000	0x4000	comic_Bank01_Start	bank start
+0x01	0x0B00	0x4B00	comic_FreeSpace_01_0B00	free-space run
+0x01	0x0B20	0x4B20	comic_TileCandidate_01_0B20	suspected 2bpp tile run
+0x01	0x0E52	0x4E52	comic_FreeSpace_01_0E52	free-space run
+0x01	0x13B2	0x53B2	comic_FreeSpace_01_13B2	free-space run
+0x01	0x2120	0x6120	comic_TileCandidate_01_2120	suspected 2bpp tile run
+0x01	0x2818	0x6818	comic_FreeSpace_01_2818	free-space run
+0x01	0x2850	0x6850	comic_TileCandidate_01_2850	suspected 2bpp tile run
+0x01	0x3FB7	0x7FB7	comic_FreeSpace_01_3FB7	free-space run
+0x02	0x0000	0x4000	comic_Bank02_Start	bank start
+0x03	0x0000	0x4000	comic_Bank03_Start	bank start
+0x03	0x3DF3	0x7DF3	comic_FreeSpace_03_3DF3	free-space run
+0x04	0x0000	0x4000	comic_Bank04_Start	bank start
+0x04	0x3729	0x7729	comic_FreeSpace_04_3729	free-space run
+0x05	0x0000	0x4000	comic_Bank05_Start	bank start
+0x05	0x3FE4	0x7FE4	comic_FreeSpace_05_3FE4	free-space run
+0x06	0x0000	0x4000	comic_Bank06_Start	bank start
+0x06	0x0110	0x4110	comic_TileCandidate_06_0110	suspected 2bpp tile run
+0x06	0x03C0	0x43C0	comic_FreeSpace_06_03C0	free-space run
+0x06	0x0410	0x4410	comic_TileCandidate_06_0410	suspected 2bpp tile run
+0x06	0x0510	0x4510	comic_FreeSpace_06_0510	free-space run
+0x06	0x0530	0x4530	comic_TileCandidate_06_0530	suspected 2bpp tile run
+0x06	0x0BC0	0x4BC0	comic_TileCandidate_06_0BC0	suspected 2bpp tile run
+0x06	0x0DAF	0x4DAF	comic_FreeSpace_06_0DAF	free-space run
+0x06	0x0E00	0x4E00	comic_TileCandidate_06_0E00	suspected 2bpp tile run
+0x06	0x1800	0x5800	comic_FreeSpace_06_1800	free-space run
+0x06	0x18FF	0x58FF	comic_FreeSpace_06_18FF	free-space run
+0x06	0x1A00	0x5A00	comic_FreeSpace_06_1A00	free-space run
+0x06	0x1B00	0x5B00	comic_FreeSpace_06_1B00	free-space run
+0x06	0x1C00	0x5C00	comic_FreeSpace_06_1C00	free-space run
+0x06	0x1D00	0x5D00	comic_FreeSpace_06_1D00	free-space run
+0x06	0x1D20	0x5D20	comic_TileCandidate_06_1D20	suspected 2bpp tile run
+0x06	0x2520	0x6520	comic_TileCandidate_06_2520	suspected 2bpp tile run
+0x06	0x34C0	0x74C0	comic_TileCandidate_06_34C0	suspected 2bpp tile run
+0x06	0x3600	0x7600	comic_FreeSpace_06_3600	free-space run
+0x06	0x3700	0x7700	comic_FreeSpace_06_3700	free-space run
+0x06	0x3720	0x7720	comic_TileCandidate_06_3720	suspected 2bpp tile run
+0x06	0x38B0	0x78B0	comic_TileCandidate_06_38B0	suspected 2bpp tile run
+0x06	0x3C60	0x7C60	comic_FreeSpace_06_3C60	free-space run
+0x06	0x3D60	0x7D60	comic_FreeSpace_06_3D60	free-space run
+0x06	0x3D80	0x7D80	comic_TileCandidate_06_3D80	suspected 2bpp tile run
+0x06	0x3FCF	0x7FCF	comic_FreeSpace_06_3FCF	free-space run
+0x07	0x0000	0x4000	comic_Bank07_Start	bank start
+0x07	0x3BCB	0x7BCB	comic_FreeSpace_07_3BCB	free-space run
+0x08	0x0000	0x4000	comic_Bank08_Start	bank start
+0x08	0x3C36	0x7C36	comic_FreeSpace_08_3C36	free-space run
+0x09	0x0000	0x4000	comic_Bank09_Start	bank start
+0x09	0x3784	0x7784	comic_FreeSpace_09_3784	free-space run
+0x0A	0x0000	0x4000	comic_Bank0A_Start	bank start
+0x0A	0x3F6D	0x7F6D	comic_FreeSpace_0A_3F6D	free-space run
+0x0B	0x0000	0x4000	comic_Bank0B_Start	bank start
+0x0B	0x3C26	0x7C26	comic_FreeSpace_0B_3C26	free-space run
+0x0C	0x0000	0x4000	comic_Bank0C_Start	bank start
+0x0C	0x3F6A	0x7F6A	comic_FreeSpace_0C_3F6A	free-space run
+0x0D	0x0000	0x4000	comic_Bank0D_Start	bank start
+0x0D	0x3ECC	0x7ECC	comic_FreeSpace_0D_3ECC	free-space run
+0x0E	0x0000	0x4000	comic_Bank0E_Start	bank start
+0x0E	0x016A	0x416A	comic_PtrTable_0E_016A	suspected pointer table
+0x0E	0x017E	0x417E	comic_PtrTable_0E_017E	suspected pointer table
+0x0E	0x0180	0x4180	comic_PtrTable_0E_0180	suspected pointer table
+0x0E	0x0182	0x4182	comic_PtrTable_0E_0182	suspected pointer table
+0x0E	0x0184	0x4184	comic_PtrTable_0E_0184	suspected pointer table
+0x0E	0x0186	0x4186	comic_PtrTable_0E_0186	suspected pointer table
+0x0E	0x0188	0x4188	comic_PtrTable_0E_0188	suspected pointer table
+0x0E	0x018A	0x418A	comic_PtrTable_0E_018A	suspected pointer table
+0x0E	0x018C	0x418C	comic_PtrTable_0E_018C	suspected pointer table
+0x0E	0x018E	0x418E	comic_PtrTable_0E_018E	suspected pointer table
+0x0E	0x0190	0x4190	comic_PtrTable_0E_0190	suspected pointer table
+0x0E	0x0192	0x4192	comic_PtrTable_0E_0192	suspected pointer table
+0x0F	0x0000	0x4000	comic_Bank0F_Start	bank start
+0x10	0x0000	0x4000	comic_Bank10_Start	bank start
+0x11	0x0000	0x4000	comic_Bank11_Start	bank start
+0x11	0x3F0A	0x7F0A	comic_FreeSpace_11_3F0A	free-space run
+0x12	0x0000	0x4000	comic_Bank12_Start	bank start
+0x12	0x3C2F	0x7C2F	comic_FreeSpace_12_3C2F	free-space run
+0x13	0x0000	0x4000	comic_Bank13_Start	bank start
+0x13	0x3F7B	0x7F7B	comic_FreeSpace_13_3F7B	free-space run
+0x14	0x0000	0x4000	comic_Bank14_Start	bank start
+0x14	0x3BAA	0x7BAA	comic_FreeSpace_14_3BAA	free-space run
+0x15	0x0000	0x4000	comic_Bank15_Start	bank start
+0x15	0x3F3A	0x7F3A	comic_FreeSpace_15_3F3A	free-space run
+0x16	0x0000	0x4000	comic_Bank16_Start	bank start
+0x16	0x01C0	0x41C0	comic_FreeSpace_16_01C0	free-space run
+0x16	0x0290	0x4290	comic_TileCandidate_16_0290	suspected 2bpp tile run
+0x16	0x0470	0x4470	comic_FreeSpace_16_0470	free-space run
+0x16	0x04F0	0x44F0	comic_FreeSpace_16_04F0	free-space run
+0x16	0x0570	0x4570	comic_FreeSpace_16_0570	free-space run
+0x16	0x05F0	0x45F0	comic_FreeSpace_16_05F0	free-space run
+0x16	0x0670	0x4670	comic_FreeSpace_16_0670	free-space run
+0x16	0x086F	0x486F	comic_FreeSpace_16_086F	free-space run
+0x16	0x08F0	0x48F0	comic_FreeSpace_16_08F0	free-space run
+0x16	0x0970	0x4970	comic_FreeSpace_16_0970	free-space run
+0x16	0x09F0	0x49F0	comic_FreeSpace_16_09F0	free-space run
+0x16	0x0A6F	0x4A6F	comic_FreeSpace_16_0A6F	free-space run
+0x16	0x0C00	0x4C00	comic_TileCandidate_16_0C00	suspected 2bpp tile run
+0x16	0x3E5F	0x7E5F	comic_FreeSpace_16_3E5F	free-space run
+0x17	0x0000	0x4000	comic_Bank17_Start	bank start
+0x17	0x35E3	0x75E3	comic_FreeSpace_17_35E3	free-space run
+0x17	0x3600	0x7600	comic_TileCandidate_17_3600	suspected 2bpp tile run
+0x17	0x385D	0x785D	comic_FreeSpace_17_385D	free-space run
+0x17	0x391B	0x791B	comic_FreeSpace_17_391B	free-space run
+0x17	0x395B	0x795B	comic_FreeSpace_17_395B	free-space run
+0x17	0x399D	0x799D	comic_FreeSpace_17_399D	free-space run
+0x17	0x3A17	0x7A17	comic_FreeSpace_17_3A17	free-space run
+0x17	0x3A59	0x7A59	comic_FreeSpace_17_3A59	free-space run
+0x17	0x3A97	0x7A97	comic_FreeSpace_17_3A97	free-space run
+0x18	0x0000	0x4000	comic_Bank18_Start	bank start
+0x18	0x2AC0	0x6AC0	comic_TileCandidate_18_2AC0	suspected 2bpp tile run
+0x18	0x3F04	0x7F04	comic_FreeSpace_18_3F04	free-space run
+0x19	0x0000	0x4000	comic_Bank19_Start	bank start
+0x19	0x305C	0x705C	comic_FreeSpace_19_305C	free-space run
+0x19	0x3180	0x7180	comic_TileCandidate_19_3180	suspected 2bpp tile run
+0x19	0x3A04	0x7A04	comic_FreeSpace_19_3A04	free-space run
+0x1A	0x0000	0x4000	comic_Bank1A_Start	bank start
+0x1B	0x0000	0x4000	comic_Bank1B_Start	bank start
+0x1C	0x0000	0x4000	comic_Bank1C_Start	bank start
+0x1C	0x0EF0	0x4EF0	comic_TileCandidate_1C_0EF0	suspected 2bpp tile run
+0x1C	0x12D0	0x52D0	comic_TileCandidate_1C_12D0	suspected 2bpp tile run
+0x1D	0x0000	0x4000	comic_Bank1D_Start	bank start
+0x1D	0x0EF0	0x4EF0	comic_TileCandidate_1D_0EF0	suspected 2bpp tile run
+0x1D	0x1320	0x5320	comic_TileCandidate_1D_1320	suspected 2bpp tile run
+0x1E	0x0000	0x4000	comic_Bank1E_Start	bank start
+0x1E	0x1BA0	0x5BA0	comic_TileCandidate_1E_1BA0	suspected 2bpp tile run
+0x1E	0x1D30	0x5D30	comic_TileCandidate_1E_1D30	suspected 2bpp tile run
+0x1F	0x0000	0x4000	comic_Bank1F_Start	bank start
+0x1F	0x0002	0x4002	comic_PtrTable_1F_0002	suspected pointer table
+0x1F	0x0004	0x4004	comic_PtrTable_1F_0004	suspected pointer table
+0x1F	0x0006	0x4006	comic_PtrTable_1F_0006	suspected pointer table
+0x1F	0x0008	0x4008	comic_PtrTable_1F_0008	suspected pointer table
+0x1F	0x000A	0x400A	comic_PtrTable_1F_000A	suspected pointer table
+0x1F	0x000C	0x400C	comic_PtrTable_1F_000C	suspected pointer table
+0x1F	0x000E	0x400E	comic_PtrTable_1F_000E	suspected pointer table
+0x1F	0x0010	0x4010	comic_PtrTable_1F_0010	suspected pointer table
+0x1F	0x0012	0x4012	comic_PtrTable_1F_0012	suspected pointer table
+0x1F	0x0014	0x4014	comic_PtrTable_1F_0014	suspected pointer table
+0x1F	0x0016	0x4016	comic_PtrTable_1F_0016	suspected pointer table
+0x1F	0x0018	0x4018	comic_PtrTable_1F_0018	suspected pointer table
+0x1F	0x001A	0x401A	comic_PtrTable_1F_001A	suspected pointer table
+0x1F	0x001C	0x401C	comic_PtrTable_1F_001C	suspected pointer table
+0x1F	0x001E	0x401E	comic_PtrTable_1F_001E	suspected pointer table
+0x1F	0x0020	0x4020	comic_PtrTable_1F_0020	suspected pointer table
+0x1F	0x0022	0x4022	comic_PtrTable_1F_0022	suspected pointer table
+0x1F	0x0024	0x4024	comic_PtrTable_1F_0024	suspected pointer table
+0x1F	0x0026	0x4026	comic_PtrTable_1F_0026	suspected pointer table
+0x1F	0x0028	0x4028	comic_PtrTable_1F_0028	suspected pointer table
+0x1F	0x002A	0x402A	comic_PtrTable_1F_002A	suspected pointer table
+0x1F	0x002C	0x402C	comic_PtrTable_1F_002C	suspected pointer table
+0x1F	0x002E	0x402E	comic_PtrTable_1F_002E	suspected pointer table
+0x1F	0x0030	0x4030	comic_PtrTable_1F_0030	suspected pointer table
+0x1F	0x0032	0x4032	comic_PtrTable_1F_0032	suspected pointer table
+0x1F	0x0034	0x4034	comic_PtrTable_1F_0034	suspected pointer table
+0x1F	0x1110	0x5110	comic_TileCandidate_1F_1110	suspected 2bpp tile run
+0x1F	0x3F00	0x7F00	comic_TileCandidate_1F_3F00	suspected 2bpp tile run
+0x20	0x0000	0x4000	comic_Bank20_Start	bank start
+0x20	0x17C0	0x57C0	comic_TileCandidate_20_17C0	suspected 2bpp tile run
+0x21	0x0000	0x4000	comic_Bank21_Start	bank start
+0x21	0x1D90	0x5D90	comic_TileCandidate_21_1D90	suspected 2bpp tile run
+0x21	0x2080	0x6080	comic_TileCandidate_21_2080	suspected 2bpp tile run
+0x21	0x26A0	0x66A0	comic_TileCandidate_21_26A0	suspected 2bpp tile run
+0x21	0x3250	0x7250	comic_TileCandidate_21_3250	suspected 2bpp tile run
+0x22	0x0000	0x4000	comic_Bank22_Start	bank start
+0x23	0x0000	0x4000	comic_Bank23_Start	bank start
+0x24	0x0000	0x4000	comic_Bank24_Start	bank start
+0x24	0x38F4	0x78F4	comic_PtrTable_24_38F4	suspected pointer table
+0x24	0x38F6	0x78F6	comic_PtrTable_24_38F6	suspected pointer table
+0x25	0x0000	0x4000	comic_Bank25_Start	bank start
+0x26	0x0000	0x4000	comic_Bank26_Start	bank start
+0x27	0x0000	0x4000	comic_Bank27_Start	bank start
+0x28	0x0000	0x4000	comic_Bank28_Start	bank start
+0x29	0x0000	0x4000	comic_Bank29_Start	bank start
+0x2A	0x0000	0x4000	comic_Bank2A_Start	bank start
+0x2B	0x0000	0x4000	comic_Bank2B_Start	bank start
+0x2C	0x0000	0x4000	comic_Bank2C_Start	bank start
+0x2D	0x0000	0x4000	comic_Bank2D_Start	bank start
+0x2E	0x0000	0x4000	comic_Bank2E_Start	bank start
+0x2F	0x0000	0x4000	comic_Bank2F_Start	bank start
+0x30	0x0000	0x4000	comic_Bank30_Start	bank start
+0x31	0x0000	0x4000	comic_Bank31_Start	bank start
+0x32	0x0000	0x4000	comic_Bank32_Start	bank start
+0x33	0x0000	0x4000	comic_Bank33_Start	bank start
+0x34	0x0000	0x4000	comic_Bank34_Start	bank start
+0x35	0x0000	0x4000	comic_Bank35_Start	bank start
+0x36	0x0000	0x4000	comic_Bank36_Start	bank start
+0x37	0x0000	0x4000	comic_Bank37_Start	bank start
+0x38	0x0000	0x4000	comic_Bank38_Start	bank start
+0x39	0x0000	0x4000	comic_Bank39_Start	bank start
+0x3A	0x0000	0x4000	comic_Bank3A_Start	bank start
+0x3B	0x0000	0x4000	comic_Bank3B_Start	bank start
+0x3C	0x0000	0x4000	comic_Bank3C_Start	bank start
+0x3D	0x0000	0x4000	comic_Bank3D_Start	bank start
+0x3E	0x0000	0x4000	comic_Bank3E_Start	bank start
+0x3F	0x0000	0x4000	comic_Bank3F_Start	bank start
+0x3F	0x2DB6	0x6DB6	comic_PtrTable_3F_2DB6	suspected pointer table
+0x3F	0x2DB8	0x6DB8	comic_PtrTable_3F_2DB8	suspected pointer table
+0x3F	0x2DBA	0x6DBA	comic_PtrTable_3F_2DBA	suspected pointer table
+0x3F	0x2DBC	0x6DBC	comic_PtrTable_3F_2DBC	suspected pointer table
+0x3F	0x2DBE	0x6DBE	comic_PtrTable_3F_2DBE	suspected pointer table
+0x3F	0x2DC0	0x6DC0	comic_PtrTable_3F_2DC0	suspected pointer table
+0x3F	0x2DC2	0x6DC2	comic_PtrTable_3F_2DC2	suspected pointer table
+0x3F	0x2DC4	0x6DC4	comic_PtrTable_3F_2DC4	suspected pointer table
+0x3F	0x2DC6	0x6DC6	comic_PtrTable_3F_2DC6	suspected pointer table
+0x3F	0x2DC8	0x6DC8	comic_PtrTable_3F_2DC8	suspected pointer table
+0x3F	0x2DCA	0x6DCA	comic_PtrTable_3F_2DCA	suspected pointer table
+0x3F	0x2DCC	0x6DCC	comic_PtrTable_3F_2DCC	suspected pointer table
+0x3F	0x2DCE	0x6DCE	comic_PtrTable_3F_2DCE	suspected pointer table
+0x3F	0x2DD0	0x6DD0	comic_PtrTable_3F_2DD0	suspected pointer table
+0x3F	0x2DD2	0x6DD2	comic_PtrTable_3F_2DD2	suspected pointer table
+0x3F	0x2DD4	0x6DD4	comic_PtrTable_3F_2DD4	suspected pointer table
+0x3F	0x2DD6	0x6DD6	comic_PtrTable_3F_2DD6	suspected pointer table
+0x3F	0x2DD8	0x6DD8	comic_PtrTable_3F_2DD8	suspected pointer table
+0x3F	0x2DDA	0x6DDA	comic_PtrTable_3F_2DDA	suspected pointer table
+0x3F	0x2DDC	0x6DDC	comic_PtrTable_3F_2DDC	suspected pointer table
+0x3F	0x2DDE	0x6DDE	comic_PtrTable_3F_2DDE	suspected pointer table
+0x3F	0x2DE0	0x6DE0	comic_PtrTable_3F_2DE0	suspected pointer table
+0x3F	0x2DE2	0x6DE2	comic_PtrTable_3F_2DE2	suspected pointer table
