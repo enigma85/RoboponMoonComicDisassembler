@@ -1,0 +1,8 @@
+[project]
+name = "robopon-open-disasm-tools"
+version = "0.1.0"
+description = "Tools for the Robopon open disassembly project"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

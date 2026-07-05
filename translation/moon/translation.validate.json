@@ -1,0 +1,39 @@
+{
+  "target": "moon",
+  "file": "translation/moon/translation.tsv",
+  "mode": "patch-edited-rows",
+  "streams": [
+    {
+      "stream": "dialogue",
+      "entries": 2000,
+      "changed": 0,
+      "in_place_possible": 0,
+      "needs_pointer_rebuild": 0,
+      "extra_needed_bytes": 0,
+      "same_bank_free_bytes": 0,
+      "free_runs": [],
+      "unsupported_rows": 0,
+      "fits_patch_mode": true
+    },
+    {
+      "stream": "descriptions",
+      "entries": 2001,
+      "changed": 0,
+      "in_place_possible": 0,
+      "needs_pointer_rebuild": 0,
+      "extra_needed_bytes": 0,
+      "same_bank_free_bytes": 977,
+      "free_runs": [
+        {
+          "offset": "0x04BC2F",
+          "length": 977
+        }
+      ],
+      "unsupported_rows": 0,
+      "fits_patch_mode": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "ok": true
+}

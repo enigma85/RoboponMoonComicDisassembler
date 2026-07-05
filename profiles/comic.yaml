@@ -1,0 +1,36 @@
+id: comic
+aliases:
+  - comic_bombom
+  - comic-bombom
+  - bombom
+  - bom_bom
+  - bom-bom
+display_name: Robot Poncots Comic BomBom Special Version
+expected_title_hint: ROBOPON
+rom_size_bank_bytes: 16384
+make_target: comic
+baserom: baseroms/comic.gbc
+build_output: build/comic.gbc
+text_streams:
+  - name: dialogue
+    table: 0x38000
+    tree: 0x0016DA
+    status: inherited_from_moon_profile_until_verified
+  - name: descriptions
+    table: 0x48000
+    tree: 0x04B900
+    status: inherited_from_moon_profile_until_verified
+fonts:
+  dialogue:
+    offset: 0x40B0
+    tiles: 192
+    columns: 16
+    scale: 4
+    status: probable_shared_font_block_verify_with_probe
+notes: >
+  Comic BomBom can now be initialized, analyzed, rebuilt, progressively
+  disassembled, text-dumped, translation-exported, and font-exported through
+  the same command surface as Moon and Sun. Because Comic BomBom has not been
+  proven byte-for-byte compatible with every Moon text/font offset, run
+  text-roundtrip and a one-glyph font probe after init. If those fail, use
+  analyze and bankdiff to update this profile instead of patching blindly.

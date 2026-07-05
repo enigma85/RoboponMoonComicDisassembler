@@ -1,0 +1,12 @@
+; Minimal hardware constants. Expand as routines are named.
+DEF rROMB0 EQU $2000
+DEF rROMB1 EQU $3000
+DEF rRAMG  EQU $0000
+DEF rLCDC  EQU $FF40
+DEF rSTAT  EQU $FF41
+DEF rSCY   EQU $FF42
+DEF rSCX   EQU $FF43
+DEF rLY    EQU $FF44
+DEF rBGP   EQU $FF47
+DEF rWY    EQU $FF4A
+DEF rWX    EQU $FF4B
