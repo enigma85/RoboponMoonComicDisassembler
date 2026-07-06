@@ -1,7 +1,7 @@
 # Robopon Open Disassembly
 THIS IS AI CODED SO IT SUCKS JUST A WARNING!
 
-CREDIT: All those that have done this before without AI and those who tools I used to create this!! Withoutyou all doing the real work, my lazy self wouldn't have been able to use AI to code this.
+CREDIT TO All those that have done this before without AI and those who tools I used to create this!! Without you all doing the real work, my lazy self wouldn't have been able to use AI to code this.
 
 This archive intentionally excludes ROMs, built ROMs, generated translation TSV/JSON, analysis outputs, and Python cache files. Add your own legally obtained ROMs under `baseroms/`.
 
