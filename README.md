@@ -1,4 +1,5 @@
 # Robopon Open Disassembly v29 Clean
+THIS IS AI CODED SO IT SUCKS JUST A WARNING!
 
 Clean repository package for Moon / Comic BomBom translation work.
 
