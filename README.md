@@ -1,8 +1,6 @@
 # Robopon Open Disassembly
 THIS IS AI CODED SO IT SUCKS JUST A WARNING!
 
-Clean repository package for Moon / Comic BomBom translation work.
-
 This archive intentionally excludes ROMs, built ROMs, generated translation TSV/JSON, analysis outputs, and Python cache files. Add your own legally obtained ROMs under `baseroms/`.
 
 ## Quick start
