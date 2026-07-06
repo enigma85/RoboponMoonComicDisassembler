@@ -203,6 +203,47 @@ def render_tokens(tokens: Iterable[int]) -> str:
     return ''.join(out)
 
 
+
+
+def render_tokens_with_charmap(tokens: Iterable[int], charmap: dict[str, list[int]]) -> str:
+    """Render decoded engine tokens through a translator charmap.
+
+    This is diagnostic only: it does not change ROM encoding.  It lets text-dump
+    show English after the kana glyph slots have been repurposed.
+    """
+    seq = [int(t) for t in tokens]
+    inv: dict[tuple[int, ...], str] = {}
+    for ch, toks in charmap.items():
+        if not toks:
+            continue
+        inv[tuple(int(x) for x in toks)] = ch
+    max_len = max((len(k) for k in inv), default=1)
+    out: list[str] = []
+    i = 0
+    while i < len(seq):
+        t = seq[i]
+        if t == 0x00:
+            break
+        if t == 0x0A:
+            out.append('\\n'); i += 1; continue
+        # Font/mode page controls are not printable.
+        if t in (0x28, 0x29):
+            i += 1; continue
+        matched = False
+        for n in range(min(max_len, len(seq)-i), 0, -1):
+            key = tuple(seq[i:i+n])
+            if key in inv:
+                out.append(inv[key]); i += n; matched = True; break
+        if matched:
+            continue
+        if t in SPECIAL and t not in (0x00, 0x0A, 0x28, 0x29):
+            out.append(SPECIAL[t])
+        else:
+            out.append(f'<{t:02X}>')
+        i += 1
+    return ''.join(out)
+
+
 def parse_token_hex(raw: str) -> list[int]:
     toks: list[int] = []
     for part in raw.replace(',', ' ').split():
@@ -338,6 +379,178 @@ def roundtrip_report(data: bytes, target: str) -> dict[str, Any]:
         streams.append({'stream': spec.name, 'entries': len(rows), 'roundtrip_ok': stream_ok})
     return {'target': target, 'entries': total, 'roundtrip_ok': ok, 'streams': streams, 'bad_examples': bad_examples}
 
+
+# ---------------------------------------------------------------------------
+# Translation charmap helpers
+# ---------------------------------------------------------------------------
+
+# Default kana-slot Latin order.  This maps translator-visible English
+# characters to the original Japanese text tokens whose font glyphs have been
+# redrawn.  It intentionally uses only tokens that already exist in the game's
+# Huffman trees; no text-engine patch is required.
+DEFAULT_LATIN_KANA_CHARS = (
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    "abcdefghijklmnopqrstuvwxyz"
+    "0123456789"
+    " .,!?\"'():;-+/&%#@[]<>*="
+)
+
+
+def default_latin_kana_charmap(start_token: int = 0xA6) -> dict[str, list[int]]:
+    out: dict[str, list[int]] = {}
+    tok = start_token
+    for ch in DEFAULT_LATIN_KANA_CHARS:
+        if ch in out:
+            continue
+        if tok > 0xFF:
+            break
+        out[ch] = [tok]
+        tok += 1
+    # Always provide control/newline aliases.
+    out['\\n'] = [0x0A]
+    return out
+
+
+def write_charmap_tsv(path: Path, mapping: dict[str, list[int]], *, note: str = '') -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open('w', newline='', encoding='utf-8') as f:
+        w = csv.DictWriter(f, fieldnames=['char','tokens','note'], delimiter='\t')
+        w.writeheader()
+        for ch, toks in mapping.items():
+            visible = '\\n' if ch == '\\n' else ch
+            w.writerow({'char': visible, 'tokens': ' '.join(f'{t:02X}' for t in toks), 'note': note})
+
+
+def _clean_charmap_char(raw: Any) -> str:
+    ch = str(raw if raw is not None else '')
+    # Preserve literal single-space entries; strip only CR/LF from spreadsheet exports.
+    ch = ch.replace('\r', '').replace('\n', '')
+    aliases = {
+        '<SPACE>': ' ', '[SPACE]': ' ', 'SPACE': ' ', '\\s': ' ',
+        '<TAB>': '\t', '[TAB]': '\t',
+        '<NL>': '\\n', '<NEWLINE>': '\\n', '[NEWLINE]': '\\n',
+    }
+    return aliases.get(ch, ch)
+
+
+def read_charmap(path: Path | None) -> dict[str, list[int]]:
+    """Read an encoder charmap as character -> engine/Huffman tokens.
+
+    Accepted TSV columns include:
+      char + tokens       preferred
+      char + token
+      char + token_hex
+
+    Deliberately *does not* treat tile_hex/code_hex as text tokens.  Tile IDs
+    are for the font sheet; the text encoder needs engine tokens that exist in
+    the Huffman tree.
+    """
+    if path is None:
+        return default_latin_kana_charmap()
+    rows: list[dict[str, Any]]
+    if path.suffix.lower() == '.json':
+        raw = json.loads(path.read_text(encoding='utf-8'))
+        if isinstance(raw, dict) and 'map' in raw:
+            raw = raw['map']
+        if isinstance(raw, dict):
+            out: dict[str, list[int]] = {}
+            for ch, toks in raw.items():
+                key = _clean_charmap_char(ch)
+                if key == '\\n':
+                    key = '\\n'
+                if isinstance(toks, str):
+                    out[key] = parse_token_hex(toks)
+                else:
+                    out[key] = [int(x, 16) if isinstance(x, str) and x.lower().startswith('0x') else int(x) for x in toks]
+            return out
+        rows = raw
+    else:
+        with path.open('r', newline='', encoding='utf-8-sig') as f:
+            rows = list(csv.DictReader(f, delimiter='\t'))
+    out: dict[str, list[int]] = {}
+    for r in rows:
+        # Be tolerant of slightly different header names.
+        ch_raw = r.get('char')
+        if ch_raw is None:
+            ch_raw = r.get('character') or r.get('glyph') or r.get('unicode')
+        ch = _clean_charmap_char(ch_raw)
+        if ch == '\\n':
+            ch = '\\n'
+        toks_raw = str(r.get('tokens') or r.get('token') or r.get('token_hex') or '').strip()
+        if not ch or not toks_raw:
+            continue
+        out[ch] = parse_token_hex(toks_raw)
+    return out
+
+def text_to_tokens_with_charmap(text: str, charmap: dict[str, list[int]] | None = None) -> list[int]:
+    """Convert translation text using an explicit translation character map.
+
+    This is the path to use after redrawing Moon/Comic kana glyphs to English.
+    Each visible English character maps to one or more original engine tokens.
+    Raw tokens/control tags are still supported with <XX>, {XX}, <PLAYER>, etc.
+    """
+    if charmap is None:
+        charmap = default_latin_kana_charmap()
+    out: list[int] = []
+    i = 0
+    keys_by_len = sorted((k for k in charmap.keys() if k), key=len, reverse=True)
+    while i < len(text):
+        ch = text[i]
+        if ch == '\\' and i + 1 < len(text) and text[i+1] == 'n':
+            out.extend(charmap.get('\\n', [0x0A])); i += 2; continue
+        if ch == '\n':
+            out.extend(charmap.get('\\n', [0x0A])); i += 1; continue
+        if ch == '<':
+            j = text.find('>', i+1)
+            if j != -1:
+                tag = text[i:j+1]
+                inner = text[i+1:j]
+                if tag in SPECIAL_REV:
+                    out.append(SPECIAL_REV[tag]); i = j+1; continue
+                if len(inner) == 2:
+                    try:
+                        out.append(int(inner, 16)); i = j+1; continue
+                    except ValueError:
+                        pass
+        if ch == '{':
+            j = text.find('}', i+1)
+            if j != -1:
+                inner = text[i+1:j]
+                try:
+                    out.append(int(inner, 16)); i = j+1; continue
+                except ValueError:
+                    pass
+        matched = False
+        for key in keys_by_len:
+            if text.startswith(key, i):
+                out.extend(charmap[key]); i += len(key); matched = True; break
+        if matched:
+            continue
+        # In charmap mode, never silently fall back to ASCII ord().  If an
+        # English character is missing here, the user's charmap needs a row for
+        # it; otherwise ASCII bytes like 0x48 reach the Huffman encoder and fail.
+        raise ValueError(f'character not in charmap at position {i}: {ch!r}')
+    if not out or out[-1] != 0x00:
+        out.append(0x00)
+    return out
+
+
+def charmap_coverage_report(data: bytes, target: str, mapping: dict[str, list[int]]) -> dict[str, Any]:
+    reports = []
+    errors = []
+    for spec in stream_specs_for_target(target):
+        tree = rip_tree(data, spec.tree)
+        cmap = code_map(tree)
+        missing_rows = []
+        for ch, toks in mapping.items():
+            missing = [t for t in toks if t not in cmap]
+            if missing:
+                missing_rows.append({'char': ch, 'tokens': [f'0x{x:02X}' for x in toks], 'missing': [f'0x{x:02X}' for x in missing]})
+        if missing_rows:
+            errors.append({'stream': spec.name, 'missing_charmap_tokens': missing_rows[:50], 'missing_count': len(missing_rows)})
+        reports.append({'stream': spec.name, 'chars': len(mapping), 'missing_chars': len(missing_rows), 'ok': not missing_rows})
+    return {'target': target, 'streams': reports, 'errors': errors, 'ok': not errors}
+
 # ---------------------------------------------------------------------------
 # Translation workflow helpers
 # ---------------------------------------------------------------------------
@@ -441,11 +654,48 @@ def read_translation_file(path: Path) -> list[dict[str, Any]]:
     return rows
 
 
-def _translated_tokens(row: dict[str, Any]) -> tuple[list[int], bool, str | None]:
+def _mode_wrapped_translation_tokens(row: dict[str, Any], toks: list[int]) -> list[int]:
+    """Preserve the original dialogue font-page/mode wrapper around edited text.
+
+    In Robopon Moon/Comic, tokens 0x28 and 0x29 are not ordinary printable
+    parentheses for dialogue: they select the kana/font page used by the renderer.
+    When the kana glyphs are redrawn as English letters, edited strings still
+    need the same leading/trailing mode tokens as the original string.  Without
+    them, the game can render the right Huffman tokens through the wrong glyph
+    page, which appears as garbled text.
+    """
+    try:
+        raw = parse_token_hex(str(row.get('raw_tokens', '')))
+    except Exception:
+        raw = []
+    if not raw:
+        return toks
+
+    prefix: list[int] = []
+    suffix: list[int] = []
+
+    # Preserve a leading font-page selector such as <HIRAGANA> / <KATAKANA>.
+    if raw and raw[0] in (0x28, 0x29) and (not toks or toks[0] not in (0x28, 0x29)):
+        prefix.append(raw[0])
+
+    # Many strings end with the opposite selector immediately before END.
+    # Preserve it unless the translated tokens already end with a selector.
+    raw_body = raw[:-1] if raw and raw[-1] == 0x00 else raw
+    if raw_body and raw_body[-1] in (0x28, 0x29) and (not toks or toks[-1] not in (0x28, 0x29)):
+        suffix.append(raw_body[-1])
+
+    return prefix + toks + suffix
+
+
+def _translated_tokens(row: dict[str, Any], charmap: dict[str, list[int]] | None = None) -> tuple[list[int], bool, str | None]:
     text = str(row.get('translation', '') or '')
     if text.strip():
         try:
-            return text_to_tokens(text), True, None
+            if charmap is not None:
+                toks = text_to_tokens_with_charmap(text, charmap)
+            else:
+                toks = text_to_tokens(text)
+            return _mode_wrapped_translation_tokens(row, toks), True, None
         except Exception as e:
             return [], True, str(e)
     try:
@@ -454,8 +704,9 @@ def _translated_tokens(row: dict[str, Any]) -> tuple[list[int], bool, str | None
         return [], False, f'bad raw_tokens: {e}'
 
 
-def validate_translation(data: bytes, target: str, translation_path: Path) -> dict[str, Any]:
+def validate_translation(data: bytes, target: str, translation_path: Path, charmap_path: Path | None = None) -> dict[str, Any]:
     rows = read_translation_file(translation_path)
+    charmap = read_charmap(charmap_path) if charmap_path is not None else None
     by_stream: dict[str, list[dict[str, Any]]] = {}
     for r in rows:
         by_stream.setdefault(str(r.get('stream')), []).append(r)
@@ -474,7 +725,7 @@ def validate_translation(data: bytes, target: str, translation_path: Path) -> di
         changed = 0
         unsupported = 0
         for r in src:
-            toks, did_change, err = _translated_tokens(r)
+            toks, did_change, err = _translated_tokens(r, charmap)
             idx = r.get('index')
             if did_change:
                 changed += 1
@@ -513,8 +764,9 @@ def validate_translation(data: bytes, target: str, translation_path: Path) -> di
     return report
 
 
-def build_translation_rom(data: bytes, target: str, translation_path: Path, allow_partial: bool = False) -> tuple[bytes, dict[str, Any], list[dict[str, Any]]]:
+def build_translation_rom(data: bytes, target: str, translation_path: Path, allow_partial: bool = False, charmap_path: Path | None = None) -> tuple[bytes, dict[str, Any], list[dict[str, Any]]]:
     rows = read_translation_file(translation_path)
+    charmap = read_charmap(charmap_path) if charmap_path is not None else None
     by_stream: dict[str, list[dict[str, Any]]] = {}
     for r in rows:
         by_stream.setdefault(str(r.get('stream')), []).append(r)
@@ -537,7 +789,7 @@ def build_translation_rom(data: bytes, target: str, translation_path: Path, allo
         changed = 0
         written = 0
         for r in src:
-            toks, did_change, err = _translated_tokens(r)
+            toks, did_change, err = _translated_tokens(r, charmap)
             if did_change:
                 changed += 1
             idx = int(r.get('index', 0))
@@ -599,6 +851,262 @@ def build_translation_rom(data: bytes, target: str, translation_path: Path, allo
         raise ValueError(json.dumps(report, ensure_ascii=False, indent=2))
     return bytes(rom), report, skipped
 
+
+
+
+# ---------------------------------------------------------------------------
+# Expanded translation packing helpers
+# ---------------------------------------------------------------------------
+
+def _rom_size_code(size: int) -> int:
+    # Game Boy header ROM size codes for common power-of-two ROM sizes.
+    table = {
+        0x8000: 0x00,      # 32 KiB
+        0x10000: 0x01,     # 64 KiB
+        0x20000: 0x02,     # 128 KiB
+        0x40000: 0x03,     # 256 KiB
+        0x80000: 0x04,     # 512 KiB
+        0x100000: 0x05,    # 1 MiB
+        0x200000: 0x06,    # 2 MiB
+        0x400000: 0x07,    # 4 MiB
+        0x800000: 0x08,    # 8 MiB
+    }
+    return table.get(size, 0x07 if size <= 0x400000 else 0x08)
+
+def _fix_gb_checksums_text_engine(rom: bytearray) -> None:
+    # Keep local copy so text_engine can produce bootable expanded ROMs without
+    # importing robopon.py.
+    x = 0
+    for i in range(0x134, 0x14D):
+        x = (x - rom[i] - 1) & 0xFF
+    rom[0x14D] = x
+    total = (sum(rom[:0x14E]) + sum(rom[0x150:])) & 0xFFFF
+    rom[0x14E] = (total >> 8) & 0xFF
+    rom[0x14F] = total & 0xFF
+
+def _next_power_of_two_rom_size(n: int) -> int:
+    size = 0x8000
+    while size < n:
+        size <<= 1
+    return size
+
+
+def _write_expanded_runtime_header(rom: bytearray, report: dict[str, Any], *, header_bank: int, header_offset: int, pointer_tables: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
+    """Write a compact runtime manifest for a future/installed ASM hook.
+
+    This is intentionally simple and stable:
+      RPEXT1\0
+      stream_count:u8
+      repeated stream records:
+        name_len:u8, ascii name bytes
+        count:u16
+        table_offset:u24  (absolute ROM offset of 3-byte banked pointer table)
+      pointer table entries:
+        bank:u8, addr_lo:u8, addr_hi:u8
+
+    A CPU hook can bank-switch to this header, locate the active stream's banked
+    pointer table, read bank+address for the requested index, bank-switch, and
+    call the normal Huffman decoder at that address.
+    """
+    pos = header_offset
+    magic = b'RPEXT1\0'
+    rom[pos:pos+len(magic)] = magic; pos += len(magic)
+    rom[pos] = len(pointer_tables) & 0xFF; pos += 1
+    table_payloads: list[tuple[str, int, bytes]] = []
+    # Reserve descriptor space first; write pointer tables immediately after.
+    desc_start = pos
+    for name, entries in pointer_tables.items():
+        name_b = name.encode('ascii', 'replace')[:31]
+        pos += 1 + len(name_b) + 2 + 3
+    table_start = pos
+    for name, entries in pointer_tables.items():
+        table_off = pos
+        payload = bytearray()
+        for e in entries:
+            bank = int(str(e.get('bank','0')).replace('0x',''), 16)
+            addr = int(str(e.get('gb_addr','0')).replace('0x',''), 16)
+            payload.extend([bank & 0xFF, addr & 0xFF, (addr >> 8) & 0xFF])
+        rom[pos:pos+len(payload)] = payload
+        pos += len(payload)
+        table_payloads.append((name, table_off, payload))
+    # Fill descriptors.
+    dpos = desc_start
+    for name, table_off, payload in table_payloads:
+        entries = pointer_tables[name]
+        name_b = name.encode('ascii', 'replace')[:31]
+        rom[dpos] = len(name_b); dpos += 1
+        rom[dpos:dpos+len(name_b)] = name_b; dpos += len(name_b)
+        count = len(entries)
+        rom[dpos] = count & 0xFF; rom[dpos+1] = (count >> 8) & 0xFF; dpos += 2
+        rom[dpos] = table_off & 0xFF; rom[dpos+1] = (table_off >> 8) & 0xFF; rom[dpos+2] = (table_off >> 16) & 0xFF; dpos += 3
+    return {
+        'magic': 'RPEXT1',
+        'header_bank': f'0x{header_bank:02X}',
+        'header_offset': f'0x{header_offset:06X}',
+        'end_offset': f'0x{pos:06X}',
+        'stream_tables': [
+            {'stream': name, 'table_offset': f'0x{off:06X}', 'bytes': len(payload), 'entries': len(pointer_tables[name])}
+            for name, off, payload in table_payloads
+        ],
+        'cpu_hook_status': 'runtime manifest installed; CPU trampoline must be connected to text decoder before game can use expanded banks automatically'
+    }
+
+def build_translation_rom_expanded(
+    data: bytes,
+    target: str,
+    translation_path: Path,
+    charmap_path: Path | None = None,
+    *,
+    start_bank: int = 0x40,
+    max_size: int = 0x400000,
+    fill_byte: int = 0xFF,
+    install_hook: bool = False,
+) -> tuple[bytes, dict[str, Any]]:
+    """Pack all translated text into expanded ROM banks.
+
+    This command creates a *data-packed expanded ROM* plus a machine-readable
+    manifest.  It intentionally does not pretend that the stock game can read
+    these banks by itself: Robopon's original stream pointers are 16-bit and do
+    not carry a bank number.  A text-engine hook/trampoline must consume the
+    generated expanded_pointer_tables before the expanded data becomes active in
+    game.
+
+    The value of this function is that it solves the space/layout side: it
+    encodes every string, stores it in unlimited appended banks, and records exact
+    bank/offset/length information for the engine patch step.
+    """
+    rows = read_translation_file(translation_path)
+    charmap = read_charmap(charmap_path) if charmap_path is not None else None
+    by_stream: dict[str, list[dict[str, Any]]] = {}
+    for r in rows:
+        by_stream.setdefault(str(r.get('stream')), []).append(r)
+
+    start_off = start_bank * BANK_SIZE
+    required_min = max(len(data), start_off)
+    rom_size = _next_power_of_two_rom_size(required_min + BANK_SIZE)
+    if rom_size > max_size:
+        raise ValueError(f'requested expanded ROM exceeds max size 0x{max_size:X}')
+    rom = bytearray(data)
+    if len(rom) < rom_size:
+        rom.extend(bytes([fill_byte]) * (rom_size - len(rom)))
+
+    pos = start_off
+    report: dict[str, Any] = {
+        'target': target,
+        'file': str(translation_path),
+        'mode': 'expanded-data-pack',
+        'runtime_status': 'expanded text packed; runtime header installed when install_hook=True',
+        'charmap': str(charmap_path) if charmap_path else None,
+        'charmap_entries': len(charmap) if charmap else 0,
+        'expanded_start_bank': f'0x{start_bank:02X}',
+        'expanded_start_offset': f'0x{start_off:06X}',
+        'streams': [],
+        'errors': [],
+        'warnings': [],
+    }
+
+    expanded_pointer_tables: dict[str, list[dict[str, Any]]] = {}
+
+    for spec in stream_specs_for_target(target):
+        tree = rip_tree(data, spec.tree)
+        huff_codes = code_map(tree)
+        src = sorted(by_stream.get(spec.name, []), key=lambda r: int(r.get('index', 0)))
+        if not src:
+            report['warnings'].append(f'no rows for stream {spec.name}')
+            continue
+
+        stream_start = pos
+        entries: list[dict[str, Any]] = []
+        changed = 0
+        unique: dict[tuple[int, ...], dict[str, Any]] = {}
+
+        for r in src:
+            idx = int(r.get('index', 0))
+            tr = str(r.get('translation', '') or '')
+            toks, did_change, err = _translated_tokens(r, charmap)
+            if did_change:
+                changed += 1
+            if err:
+                report['errors'].append({'stream': spec.name, 'index': idx, 'error': str(err)})
+                continue
+            missing = sorted({int(t) for t in toks if int(t) not in huff_codes})
+            if missing:
+                report['errors'].append({'stream': spec.name, 'index': idx, 'error': 'tokens not present in Huffman tree: ' + ','.join(f'0x{x:02X}' for x in missing)})
+                continue
+            key = tuple(int(t) for t in toks)
+            if key in unique:
+                ent = dict(unique[key])
+                ent['index'] = idx
+                ent['dedup_of'] = unique[key]['index']
+                entries.append(ent)
+                continue
+            packed, bits = encode_tokens(toks, tree)
+            # Grow to next power-of-two size as necessary, up to max_size.
+            if pos + len(packed) > len(rom):
+                new_size = _next_power_of_two_rom_size(pos + len(packed))
+                if new_size > max_size:
+                    report['errors'].append({'stream': spec.name, 'index': idx, 'error': f'expanded ROM overflow: need 0x{pos+len(packed):X}, max 0x{max_size:X}'})
+                    continue
+                rom.extend(bytes([fill_byte]) * (new_size - len(rom)))
+            off = pos
+            rom[off:off+len(packed)] = packed
+            pos += len(packed)
+            ent = {
+                'index': idx,
+                'offset': f'0x{off:06X}',
+                'bank': f'0x{off // BANK_SIZE:02X}',
+                'bank_offset': f'0x{off % BANK_SIZE:04X}',
+                'gb_addr': f'0x{0x4000 + (off % BANK_SIZE):04X}' if off >= BANK_SIZE else f'0x{off:04X}',
+                'packed_bytes': len(packed),
+                'bits': bits,
+                'changed': bool(did_change),
+                'translation': tr,
+            }
+            unique[key] = dict(ent)
+            entries.append(ent)
+
+        expanded_pointer_tables[spec.name] = entries
+        report['streams'].append({
+            'stream': spec.name,
+            'entries': len(src),
+            'changed_requested': changed,
+            'expanded_data_start': f'0x{stream_start:06X}',
+            'expanded_data_end': f'0x{pos:06X}',
+            'packed_bytes': pos - stream_start,
+            'unique_strings': len(unique),
+            'expanded_pointer_format': 'bank,gb_addr,packed_bytes per row; requires engine hook',
+        })
+
+    report['expanded_pointer_tables'] = expanded_pointer_tables
+    if install_hook:
+        # Place runtime header after packed text, aligned to 0x100.
+        header_offset = (pos + 0xFF) & ~0xFF
+        header_end_needed = header_offset + 0x100 + sum(len(v)*3 for v in expanded_pointer_tables.values())
+        if header_end_needed > len(rom):
+            new_size = _next_power_of_two_rom_size(header_end_needed)
+            if new_size > max_size:
+                report['errors'].append({'stream': 'runtime', 'index': -1, 'error': f'expanded hook header overflow: need 0x{header_end_needed:X}, max 0x{max_size:X}'})
+            else:
+                rom.extend(bytes([fill_byte]) * (new_size - len(rom)))
+        if not report['errors']:
+            hook_info = _write_expanded_runtime_header(rom, report, header_bank=header_offset//BANK_SIZE, header_offset=header_offset, pointer_tables=expanded_pointer_tables)
+            report['expanded_runtime_header'] = hook_info
+            pos = max(pos, int(hook_info['end_offset'], 16))
+            report['runtime_status'] = 'expanded runtime header installed; CPU hook connection still target-specific'
+    report['expanded_end_offset'] = f'0x{pos:06X}'
+    final_size = _next_power_of_two_rom_size(max(pos, len(data)))
+    final_size = max(final_size, len(data))
+    if final_size < len(rom):
+        rom = rom[:final_size]
+    if len(rom) in (0x8000,0x10000,0x20000,0x40000,0x80000,0x100000,0x200000,0x400000,0x800000):
+        rom[0x148] = _rom_size_code(len(rom))
+    _fix_gb_checksums_text_engine(rom)
+    report['rom_size'] = len(rom)
+    report['rom_size_hex'] = f'0x{len(rom):X}'
+    report['ok'] = not report['errors']
+    if report['errors']:
+        raise ValueError(json.dumps(report, ensure_ascii=False, indent=2))
+    return bytes(rom), report
 
 # ---------------------------------------------------------------------------
 # Basic Game Boy 2bpp font helpers. These operate on explicitly supplied offsets.
@@ -696,12 +1204,82 @@ def _free_runs_in_bank(data: bytes, bank_start: int, bank_end: int, protected_un
     return runs
 
 
-def validate_translation(data: bytes, target: str, translation_path: Path) -> dict[str, Any]:
+def _free_runs_in_range(data: bytes, start: int, end: int, protected: list[tuple[int, int]] | None = None, min_len: int = 4) -> list[tuple[int, int]]:
+    """Find 00/FF free runs in a ROM range, excluding protected intervals."""
+    protected = sorted(protected or [])
+    def is_protected(pos: int) -> int | None:
+        for a, b in protected:
+            if a <= pos < b:
+                return b
+        return None
+    runs: list[tuple[int, int]] = []
+    i = start
+    while i < min(end, len(data)):
+        skip_to = is_protected(i)
+        if skip_to is not None:
+            i = skip_to
+            continue
+        if data[i] not in (0x00, 0xFF):
+            i += 1; continue
+        val = data[i]
+        j = i + 1
+        while j < min(end, len(data)) and data[j] == val and is_protected(j) is None:
+            j += 1
+        if j - i >= min_len:
+            runs.append((i, j - i))
+        i = j
+    return runs
+
+
+def _encode_pointer_for_offset(table_start: int, offset: int, pointer_mode: str) -> int:
+    """Encode a text pointer word for an absolute ROM offset.
+
+    same-bank uses the low 14-bit byte offset from the pointer table.
+    window14 uses the top two bits as a 16 KiB window index. Existing Robopon
+    dialogue pointers have been observed decoding this way, allowing strings in
+    the table bank and the next three banks without a code patch.
+    """
+    delta = offset - table_start
+    if pointer_mode == 'same-bank':
+        if not (0 <= delta <= 0x3FFF):
+            raise ValueError(f'pointer out of same-bank range for offset 0x{offset:06X}')
+        return delta
+    if pointer_mode == 'window14':
+        if not (0 <= delta <= 0xFFFF):
+            raise ValueError(f'pointer out of window14 range for offset 0x{offset:06X}')
+        window = delta // BANK_SIZE
+        low = delta & 0x3FFF
+        if not (0 <= window <= 3):
+            raise ValueError(f'window14 window out of range for offset 0x{offset:06X}')
+        return (window << 14) | low
+    raise ValueError(f'unknown pointer_mode: {pointer_mode}')
+
+def _allocation_runs_for_stream(data: bytes, target: str, spec: StreamSpec, count: int, pointer_mode: str) -> tuple[list[tuple[int,int]], str]:
+    table_start = spec.table
+    table_end = table_start + count * 2
+    if pointer_mode == 'window14':
+        start = table_end
+        end = min(table_start + 0x10000, len(data))
+        # Protect all known stream pointer tables so expanded dialogue cannot
+        # overwrite description pointers or other text tables in the window.
+        protected = []
+        for other in stream_specs_for_target(target):
+            # Use a conservative 0x1000 table protection if exact row count is not known.
+            if table_start <= other.table < end:
+                protected.append((other.table, min(other.table + 0x1000, end)))
+        return _free_runs_in_range(data, start, end, protected=protected, min_len=8), f'0x{start:06X}-0x{end:06X}'
+    bank_start = bank_base(table_start)
+    bank_end = bank_start + BANK_SIZE
+    return _free_runs_in_bank(data, bank_start, bank_end, table_end, min_len=8), f'0x{table_end:06X}-0x{bank_end:06X}'
+
+
+def validate_translation(data: bytes, target: str, translation_path: Path, charmap_path: Path | None = None) -> dict[str, Any]:
     rows = read_translation_file(translation_path)
+    charmap = read_charmap(charmap_path) if charmap_path is not None else None
     by_stream: dict[str, list[dict[str, Any]]] = {}
     for r in rows:
         by_stream.setdefault(str(r.get('stream')), []).append(r)
-    report: dict[str, Any] = {'target': target, 'file': str(translation_path), 'mode': 'patch-edited-rows', 'streams': [], 'errors': [], 'warnings': []}
+    report: dict[str, Any] = {'target': target, 'file': str(translation_path), 'mode': 'patch-edited-rows', 'charmap': str(charmap_path) if charmap_path else None, 'charmap_entries': len(charmap) if charmap else 0, 'streams': [], 'errors': [], 'warnings': []}
     for spec in stream_specs_for_target(target):
         tree = rip_tree(data, spec.tree)
         cmap = code_map(tree)
@@ -720,7 +1298,7 @@ def validate_translation(data: bytes, target: str, translation_path: Path) -> di
             if not str(r.get('translation','') or '').strip():
                 continue
             changed += 1
-            toks, _, err = _translated_tokens(r)
+            toks, _, err = _translated_tokens(r, charmap)
             idx = r.get('index')
             if err:
                 unsupported += 1; report['errors'].append({'stream': spec.name, 'index': idx, 'error': err}); continue
@@ -747,70 +1325,147 @@ def validate_translation(data: bytes, target: str, translation_path: Path) -> di
     return report
 
 
-def build_translation_rom(data: bytes, target: str, translation_path: Path, allow_partial: bool = False) -> tuple[bytes, dict[str, Any], list[dict[str, Any]]]:
+
+def build_translation_rom(data: bytes, target: str, translation_path: Path, allow_partial: bool = False, charmap_path: Path | None = None, pointer_mode: str = 'same-bank') -> tuple[bytes, dict[str, Any], list[dict[str, Any]]]:
+    """Build a translated ROM by patching only edited translation rows.
+
+    This is the safe mode for the current Robopon text engine work:
+    - Unedited rows remain byte-for-byte unchanged, so replacing the font does not
+      require re-encoding the entire Japanese stream.
+    - Edited rows are converted through charmap.tsv into existing Huffman tokens.
+    - If the new encoded string fits in the original string's byte allocation, it
+      is written in place and padded.
+    - If it does not fit, the builder tries to place it in an existing 0x00/0xFF
+      free run in the same text bank and updates that row's pointer.
+
+    Full-script translation still needs either much shorter English, DTE/MTE, or
+    an expanded text-engine patch. This command is intended for accurate testing
+    and incremental translation without corrupting unchanged rows.
+    """
     rows = read_translation_file(translation_path)
+    charmap = read_charmap(charmap_path) if charmap_path is not None else None
     by_stream: dict[str, list[dict[str, Any]]] = {}
     for r in rows:
         by_stream.setdefault(str(r.get('stream')), []).append(r)
+
     rom = bytearray(data)
-    report: dict[str, Any] = {'target': target, 'file': str(translation_path), 'mode': 'patch-edited-rows', 'streams': [], 'errors': [], 'warnings': []}
+    report: dict[str, Any] = {
+        'target': target,
+        'file': str(translation_path),
+        'mode': 'patch-edited-rows',
+        'pointer_mode': pointer_mode,
+        'charmap': str(charmap_path) if charmap_path else None,
+        'charmap_entries': len(charmap) if charmap else 0,
+        'streams': [],
+        'errors': [],
+        'warnings': [],
+    }
     skipped: list[dict[str, Any]] = []
+
     for spec in stream_specs_for_target(target):
-        tree = rip_tree(data, spec.tree); cmap = code_map(tree)
+        tree = rip_tree(data, spec.tree)
+        huff_codes = code_map(tree)
         src = sorted(by_stream.get(spec.name, []), key=lambda r: int(r.get('index', 0)))
-        if not src: continue
+        if not src:
+            report['warnings'].append(f'no rows for stream {spec.name}')
+            continue
+
         table_start = spec.table
-        bank_start = bank_base(table_start); bank_end = bank_start + BANK_SIZE
-        protected_until = table_start + len(src)*2
-        free_runs = _free_runs_in_bank(data, bank_start, bank_end, protected_until)
-        run_i = 0; run_pos = free_runs[0][0] if free_runs else 0; run_end = free_runs[0][0]+free_runs[0][1] if free_runs else 0
-        changed = in_place = repointed = written = 0
+        bank_start = bank_base(table_start)
+        bank_end = bank_start + BANK_SIZE
+        protected_until = table_start + len(src) * 2
+        free_runs, allocation_range = _allocation_runs_for_stream(bytes(rom), target, spec, len(src), pointer_mode)
+        free_i = 0
+        changed = written = in_place = repointed = too_long = 0
+
         for r in src:
-            trans = str(r.get('translation','') or '')
-            if not trans.strip(): continue
+            tr = str(r.get('translation', '') or '')
+            if not tr.strip():
+                continue
             changed += 1
             idx = int(r.get('index', 0))
-            toks, _, err = _translated_tokens(r)
+            toks, did_change, err = _translated_tokens(r, charmap)
             if err:
-                if allow_partial: skipped.append({'stream': spec.name,'index':idx,'reason':err,'translation':trans}); continue
-                report['errors'].append({'stream': spec.name,'index':idx,'error':err}); continue
-            missing = sorted({int(t) for t in toks if int(t) not in cmap})
+                if allow_partial:
+                    skipped.append({'stream': spec.name, 'index': idx, 'reason': str(err), 'translation': tr})
+                    continue
+                report['errors'].append({'stream': spec.name, 'index': idx, 'error': str(err)})
+                continue
+            missing = sorted({int(t) for t in toks if int(t) not in huff_codes})
             if missing:
                 reason = 'tokens not present in Huffman tree: ' + ','.join(f'0x{x:02X}' for x in missing)
-                if allow_partial: skipped.append({'stream': spec.name,'index':idx,'reason':reason,'translation':trans}); continue
-                report['errors'].append({'stream': spec.name,'index':idx,'error':reason}); continue
+                if allow_partial:
+                    skipped.append({'stream': spec.name, 'index': idx, 'reason': reason, 'translation': tr})
+                    continue
+                report['errors'].append({'stream': spec.name, 'index': idx, 'error': reason})
+                continue
+
             packed, bits = encode_tokens(toks, tree)
-            old_off = int(str(r.get('offset')), 16)
-            old_bytes = int(r.get('bytes') or 0)
+            try:
+                old_off = int(str(r.get('offset', '')).strip(), 0)
+                old_bytes = int(str(r.get('bytes', '')).strip() or '0')
+            except Exception as e:
+                report['errors'].append({'stream': spec.name, 'index': idx, 'error': f'bad offset/bytes in translation row: {e}'})
+                continue
+            if not (bank_start <= old_off < bank_end):
+                report['errors'].append({'stream': spec.name, 'index': idx, 'error': f'old offset 0x{old_off:06X} outside stream bank'})
+                continue
+
             if len(packed) <= old_bytes:
-                rom[old_off:old_off+len(packed)] = packed
-                # Fill leftover with FF; pointer remains unchanged.
-                for j in range(old_off+len(packed), old_off+old_bytes): rom[j] = 0xFF
-                in_place += 1; written += 1; continue
-            # Allocate in same bank free run and rebuild pointer word.
-            while run_i < len(free_runs) and run_pos + len(packed) > run_end:
-                run_i += 1
-                if run_i < len(free_runs):
-                    run_pos = free_runs[run_i][0]; run_end = free_runs[run_i][0] + free_runs[run_i][1]
-            if run_i >= len(free_runs):
-                reason = f'no same-bank free run large enough for {len(packed)} bytes'
-                if allow_partial: skipped.append({'stream': spec.name,'index':idx,'reason':reason,'translation':trans}); continue
-                report['errors'].append({'stream': spec.name,'index':idx,'error':reason}); continue
-            ptr = run_pos - table_start
-            if not (0 <= ptr <= 0x3FFF):
-                reason = f'new pointer out of 14-bit range: 0x{ptr:04X}'
-                if allow_partial: skipped.append({'stream': spec.name,'index':idx,'reason':reason,'translation':trans}); continue
-                report['errors'].append({'stream': spec.name,'index':idx,'error':reason}); continue
-            rom[run_pos:run_pos+len(packed)] = packed
-            rom[table_start + idx*2: table_start + idx*2 + 2] = int(ptr).to_bytes(2, 'little')
-            run_pos += len(packed)
-            repointed += 1; written += 1
+                rom[old_off:old_off + len(packed)] = packed
+                if old_bytes > len(packed):
+                    rom[old_off + len(packed):old_off + old_bytes] = b'\xFF' * (old_bytes - len(packed))
+                written += 1
+                in_place += 1
+                continue
+
+            # Try repointing to same-bank free space.
+            placed = False
+            need = len(packed)
+            while free_i < len(free_runs):
+                run_off, run_len = free_runs[free_i]
+                if run_len < need:
+                    free_i += 1
+                    continue
+                rom[run_off:run_off + need] = packed
+                if run_len > need:
+                    free_runs[free_i] = (run_off + need, run_len - need)
+                else:
+                    free_i += 1
+                try:
+                    ptr = _encode_pointer_for_offset(table_start, run_off, pointer_mode)
+                except ValueError as e:
+                    report['errors'].append({'stream': spec.name, 'index': idx, 'error': str(e)})
+                    placed = True
+                    break
+                rom[table_start + idx*2: table_start + idx*2 + 2] = int(ptr).to_bytes(2, 'little')
+                written += 1
+                repointed += 1
+                placed = True
+                break
+            if not placed:
+                too_long += 1
+                reason = f'translation encoded to {need} bytes, original slot has {old_bytes} bytes, and no same-bank free run is large enough'
+                if allow_partial:
+                    skipped.append({'stream': spec.name, 'index': idx, 'reason': reason, 'translation': tr})
+                else:
+                    report['errors'].append({'stream': spec.name, 'index': idx, 'error': reason})
+
         report['streams'].append({
-            'stream': spec.name, 'changed_requested': changed, 'written': written,
-            'in_place': in_place, 'repointed': repointed,
-            'remaining_free_runs': len(free_runs) - run_i if free_runs else 0,
+            'stream': spec.name,
+            'entries': len(src),
+            'changed_requested': changed,
+            'written': written,
+            'in_place': in_place,
+            'repointed': repointed,
+            'too_long': too_long,
+            'table_offset': f'0x{table_start:06X}',
+            'remaining_free_runs': len([r for r in free_runs[free_i:] if r[1] >= 8]),
+            'allocation_range': allocation_range,
         })
+
     report['ok'] = not report['errors']
     if report['errors'] and not allow_partial:
         raise ValueError(json.dumps(report, ensure_ascii=False, indent=2))
     return bytes(rom), report, skipped
+

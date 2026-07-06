@@ -1,6 +1,37 @@
+# Robopon Open Disassembly v29 Clean
+
+Clean repository package for Moon / Comic BomBom translation work.
+
+This archive intentionally excludes ROMs, built ROMs, generated translation TSV/JSON, analysis outputs, and Python cache files. Add your own legally obtained ROMs under `baseroms/`.
+
+## Quick start
+
+```bash
+cp "Robot Poncots - Moon Version.gbc" baseroms/moon.gbc
+python3 tools/robopon.py init --target moon --rom baseroms/moon.gbc
+make moon
+python3 tools/robopon.py compare --rom baseroms/moon.gbc --built build/moon.gbc
+```
+
+## Expanded text build
+
+```bash
+python3 tools/robopon.py translation-build-expanded \
+  --target moon \
+  --rom build/moon_font.gbc \
+  --translation translation/moon/translation.tsv \
+  --charmap translation/moon/charmap.tsv \
+  --install-hook \
+  --out build/moon_expanded_text.gbc
+```
+
+See `docs/EXPANDED_TEXT_HOOK.md` and `docs/EXPANDED_TEXT_STORAGE.md`.
+
+---
+
 # Robopon Open Disassembly
 
-A clean-room, ROM-data-free disassembly workspace for **Robot Poncots / Robopon** Game Boy Color games. This is AI-Driven so it sucks but it is intended to help get English translation completed of the 2 non-English games. And as a bonus could help get it into other languages as well. Again its AI so it sucks.
+A clean-room, ROM-data-free disassembly workspace for **Robot Poncots / Robopon** Game Boy Color games.
 
 Supported targets:
 
@@ -179,3 +210,106 @@ python3 tools/robopon.py text-roundtrip --target comic --rom baseroms/comic.gbc
 ```
 
 See `docs/COMIC_BOMBOM_SUPPORT.md` for the full Comic workflow.
+
+## English dialogue font
+
+Generate a kana-slot English replacement font:
+
+```bash
+python3 tools/robopon.py font-english --target moon --rom baseroms/moon.gbc
+python3 tools/robopon.py font-import --rom baseroms/moon.gbc --png gfx/moon/fonts/dialogue.png --out build/moon_english_font.gbc
+```
+
+See `docs/ENGLISH_DIALOGUE_FONT.md` for the single-glyph verification workflow.
+
+## Sun-style English font port
+
+To replace only the kana dialogue-font slots with the English Sun font style:
+
+```bash
+python3 tools/robopon.py font-port-sun-english --target moon --rom baseroms/moon.gbc --sun-rom baseroms/sun.gbc
+python3 tools/robopon.py font-import --rom baseroms/moon.gbc --png gfx/moon/fonts/dialogue.sun-english-kana-slots.png --out build/moon_sun_english_font.gbc
+```
+
+See `docs/SUN_STYLE_ENGLISH_FONT.md`.
+
+## English-font translation workflow
+
+After importing the Sun-style English font into Moon/Comic, use the charmap-based translation layer:
+
+```bash
+python3 tools/robopon.py charmap-export --target moon --rom baseroms/moon.gbc
+python3 tools/robopon.py translation-export --target moon --rom baseroms/moon.gbc
+python3 tools/robopon.py translation-validate --target moon --rom baseroms/moon.gbc --translation translation/moon/translation.tsv --charmap translation/moon/charmap.tsv
+python3 tools/robopon.py translation-build --target moon --rom build/moon_sun_english_font.gbc --translation translation/moon/translation.tsv --charmap translation/moon/charmap.tsv --out build/moon_translated.gbc
+```
+
+See `docs/TRANSLATING_WITH_ENGLISH_FONT.md`.
+
+
+## v13 charmap encoder fix
+
+`translation-validate` and `translation-build` now correctly pass the supplied charmap into patch-edited-row mode. Use `charmap-export`; do not use visual grid tile indices as text tokens. See `docs/CHARMAP_TOKENS.md`.
+
+## Added in v14
+
+- `charmap-from-font`: generates token -> tile mapping TSVs from exported dialogue font PNGs. See `docs/CHARMAP_FROM_FONT.md`.
+
+
+## v15 charmap build fix
+
+`translation-build` now strictly encodes through the edited `charmap.tsv` and auto-loads `translation/<target>/charmap.tsv` when present. See `docs/CHARMAP_BUILD_FIX.md`.
+
+## v17 patch-edited-rows translation fix
+
+`translation-build` now patches only rows with a non-empty `translation` column. Unedited text stays byte-for-byte unchanged. This avoids overflowing the original text banks while you test or incrementally translate Moon/Comic with the edited English dialogue font.
+
+
+## Font compacting
+
+If an English font sheet uses token labels above `0xFF`, use `font-compact` to move selected glyphs into real encodable Huffman byte-token slots. See `docs/FONT_COMPACT.md`.
+
+## v23 punctuation scan
+
+Added `punctuation-scan` to identify safe original punctuation Huffman tokens for English charmap files. See `docs/PUNCTUATION_SCAN.md`.
+
+### v24: longer English strings
+
+`translation-build` now supports `--pointer-mode window14`, which lets edited
+rows be repointed into the table bank plus the next three 16 KiB pointer windows.
+Use it when English is longer than the original Japanese slot:
+
+```bash
+python3 tools/robopon.py translation-build --target moon --rom build/moon_font.gbc \
+  --translation translation/moon/translation.tsv --charmap translation/moon/charmap.tsv \
+  --pointer-mode window14 --out build/moon_translated.gbc
+```
+
+See `docs/EXPANDED_TEXT_STORAGE.md`.
+
+## v25 menu translation
+
+Added `menu-export` and `menu-build` for fixed-width/plain menu and UI strings. See `docs/MENU_TRANSLATION.md`.
+
+
+### Easy menu translation
+
+```bash
+python3 tools/robopon.py menu-export --target moon --rom baseroms/moon.gbc
+```
+
+This now writes `menu.tsv`, `menu_easy.tsv`, and `menu_glossary.tsv`. Edit `translation/<target>/menu/menu_easy.tsv`, then build with `menu-build`. See `docs/MENU_TRANSLATION_EASY_TSV.md`.
+
+
+## v27 Japanese menu source export
+
+`menu-export` now decodes menu/UI byte strings into Japanese text columns (`source` and `source_katakana`) so `menu.tsv` is easier to translate like dialogue `translation.tsv`.
+
+## v29 expanded text packing
+
+Added `translation-build-expanded` for full-script expanded ROM text packing. See `docs/EXPANDED_TEXT_STORAGE.md`.
+
+
+## v29 expanded text hook
+
+Use `translation-build-expanded --install-hook` to pack translated text into expanded banks and write the `RPEXT1` runtime header/manifest. See `docs/EXPANDED_TEXT_HOOK.md`.
